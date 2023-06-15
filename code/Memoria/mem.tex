@@ -1,0 +1,313 @@
+\documentclass[a4paper, 12.5pt]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{dirtree}
+% Configuración de los márgenes
+\usepackage[a4paper,left=2cm,right=1cm,top=1.7cm,bottom=1.7cm]{geometry}
+
+\usepackage[nottoc, notlot, notlof, notindex]{tocbibind}
+\usepackage{algorithmicx} %% Opciones de índice
+% Configuración de los encabezados y pies de página
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\footnotesize\itshape\rightmark}
+\lhead{\footnotesize\itshape\nouppercase{\leftmark}}
+\rfoot{\thepage}
+
+% Configuración de los espacios entre párrafos
+\setlength{\parskip}{1em}
+
+% Configuración de los listados de código
+\lstset{basicstyle=\footnotesize\ttfamily, breaklines=true, frame=single, tabsize=2, language=c++}
+
+% Configuración de los enlaces hipervínculos
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black}
+
+% Configuración de las tablas
+\setlength{\tabcolsep}{12pt}
+\renewcommand{\arraystretch}{1.5}
+
+% Configuración de las leyendas de las figuras
+\captionsetup[figure]{font=footnotesize,labelfont=bf,skip=10pt}
+
+% Configuración de las sub-figuras
+\captionsetup[subfigure]{font=footnotesize,labelfont=bf,skip=2pt}
+
+% Configuración de las ecuaciones
+\allowdisplaybreaks
+
+% Configuración de la fuente del documento
+\renewcommand{\familydefault}{\sfdefault}
+
+% Comienza la numeración de las secciones en 1
+% \setcounter{section}{1}
+
+\begin{document}
+
+
+
+\begin{titlepage}
+	\centering
+	\includegraphics[width=0.3\textwidth]{logo.png}\par\vspace{0.75cm}
+	{\Large Universidad de Granada \par}
+	\vspace{0.75cm}
+	{\large Departamento de Ciencias de la Computación e Inteligencia Artificial \par}
+	\vspace{1cm}
+	{\huge\bfseries Memoria de Prácticas Final de Metaheurísticas\par}
+	\vspace{1.25cm}
+	{\Large\itshape Daniel Chico\\DNI: 26508525J\\
+		Correo: dachival@correo.ugr.es\par}
+	\vfill
+	{\large\bfseries\itshape Práctica optativa: Implementación del GWO y comparativas aplicando el problema de la competición CEC2017\par}
+	\vfill
+	{\small Subgrupo: 3}
+	\vfill
+	{\small Horario: Miercoles (17.30/19.30)}
+	\vfill
+	{\small Tutor: Daniel Molina}
+	\vfill
+	{\small \today \par}
+
+	\begin{center}
+
+		\subsection*{Algoritmos Implementados:}
+		\begin{itemize}
+			\item Grey wolf Optimization
+			\item Grey Wolf Optimization - Búsqueda local
+			% \item Grey Wolf Optimization - Enfriamiento simulado
+		\end{itemize}
+
+	\end{center}
+
+
+\end{titlepage}
+
+\tableofcontents
+
+
+\section{Resumen}\label{sec:resumen}
+
+\subsection{Grey Wolf Optimization}
+
+Para el desarrollo de la práctica alternativa decidí implementar una metaheurística basada en el lobo gris, a partir de ahora será GWO de sus siglas en inglés. Esta metaheurísticas se basa en el comportamiento de las manadas de lobos. Se basa en dos premisas, la gerarquía social dentro de la manada y las técnicas de caza.
+
+De observar la gerarquía de los lobos se pueden distinguir 4 roles entre los que se dividen los individuos de una manada:
+\begin{itemize}
+	\item $\alpha$: Los jefes de la manada, no son los mas fuertes sino los que tienen una mayor capacidad organizativa
+	\item $\beta$: Segundos en el escalafón, realizan tareas organizativas también y apoyan al $\alpha$
+	\item $\delta$: Tercer escalafón
+	\item $\omega$: últimos en la escala social de la manada, son unos mandados a efectos prácticos, también son los lobos más débiles de la manada.
+\end{itemize}
+
+
+A la hora de cazar los lobos persiguen a su presa hasta que consiguen rodearla y que esta se pare, a partir de ese momento empiezan a atacarlo poco a poco hasta que consigue su objetivo.
+
+\subsubsection{Formalización matemática}
+Por lo comentado anteriormente esta metaheurística se basa en modelos poblacionales en el que las peores soluciones de la población son consideradas $\omega_s$ y se modifican en función de un parametro aleatório y una ''suma'' de las distancias a las mejores soluciones. En este caso corresponderían a los lobos $\alpha$,$\beta$ y $\delta$. Este proceso difiere de como cazan los lobos ya que, en problemas de este tipo, no se puede ''divisar'' a la presa (solución óptima) para perseguirla asi que se hace la asumpción de que las mejores soluciónes ''saben'' algo sobre la solución óptima e influyen en el comportamiento del resto de la población.
+
+Durante el proceso de caza, los lobos tienden a rodear a su presa primero. matemáticamente se puede formular de la siguiente manera:
+$$D=|C*X_p(t)-X(t)| $$
+$$X(t+1)=X_p(t)-A*D$$
+$$A=2ar_1-r_2$$
+$$C=2r_2$$
+Donde:
+\begin{itemize}
+	\item t $\rightarrow$ Iteración actual
+	\item $X_p$ $\rightarrow$ Vector posición de la presa
+	\item X $\rightarrow$ Posicion de un lobo
+	\item A $\rightarrow$ Vector con coeficientes
+	\item D $\rightarrow$ Vector con coeficientes
+	\item $r_1$ $\rightarrow$ vector aleatorio con coef [0,1]
+	\item $r_2$ $\rightarrow$ vector aleatorio con coef [0,1]
+	\item a $\rightarrow$ parametro que va de [2,0] y decrece linealmente con el paso de las iteraciones
+\end{itemize}
+
+\newpage
+Aunque el proceso de caza es guiado por $\alpha,\beta$ y $\delta$, en un problema en un espacio de búsqueda abstracto, no sabemos la posición de la presa ''presa'' (solución, óptima o no), para simular la caza, se asume que la cuspide de la gerarquía estíman mejor la posición de la presa y por consiguiente guían  al resto de la manada. Esto se puede formular de la siguiente manera:
+
+
+\begin{itemize}
+	\item $D_\alpha=|C_1*X_\alpha(t)-X(t)| $
+	\item $D_\beta=|C_2*X_\beta(t)-X(t)| $
+	\item $D_\delta=|C_3*X_\delta(t)-X(t)| $
+	\item $X_1=X_\alpha(t)-A_1*D_\alpha$
+	\item $X_2=X_\beta(t)-A_2*D_\beta$
+	\item $X_3=X_\delta(t)-A_3*D_\delta$
+	\item $X(t+1)=\frac{X_1+X_2+X_3}{3}$
+\end{itemize}
+
+
+\subsubsection*{Pseudocódigo}
+
+
+\begin{algorithm}[H]
+	\caption{Grey Wolf Optimization}\label{alg:GWO}
+	\begin{algorithmic}[1]
+	\Function{GWO}{$n\_sol$}
+		\State Inicializamos la población $X_i (i=1,...,N\_SOL)$
+		\State $func\_coste \gets create\_fitnes\_func(datos)$
+		\State $mejor\_solucion \gets GeneraSolucionAleatoria(datos.n)$
+		\State $mejor\_solucion \gets BL(datos, mejor\_solucion, 2000, k)$ \Comment{El parametro K controla el tamaño del entorno a explorar}
+		\State $mejor\_coste \gets func\_coste(mejor\_solucion)$
+		\State $k \gets 1$
+		\State $K\_MAX \gets datos.n$
+		\For{$i \gets 1$ \textbf{to} $N\_SOL-1$}
+			\State $sol \gets mutacion\_ils(mejor\_solucion)$
+			\State $sol \gets BL(datos, sol, 2000, k)$
+			\State $costo\_nuevo \gets func\_coste(sol)$
+			\If{$costo\_nuevo < mejor\_coste$}
+				\State $mejor\_solucion \gets sol$
+				\State $mejor\_coste \gets costo\_nuevo$
+				\State $k \gets 1$
+			\Else
+				\State $k \gets k + 1$
+			\EndIf
+			\State $k \gets (k > K\_MAX) ? 1 : k$
+		\EndFor
+		\Return $mejor\_solucion$
+	\EndFunction
+
+
+	\end{algorithmic}
+	\end{algorithm}
+
+
+
+\section{Análisis de Rendimientos}
+
+\subsection{1\% de Evaluaciones}
+
+\subsection{50\% de Evaluaciones}
+
+\subsection{100\% de Evaluaciones}
+
+
+\section{Hibridación y Análisis de Rendimiento}
+
+
+\subsection{Proceso de Hibridación}
+
+
+\subsection{Análisis del rendimiento}
+
+\subsubsection{1\% de Evaluaciones}
+\subsubsection{50\% de Evaluaciones}
+\subsubsection{100\% de Evaluaciones}
+
+\section{Procedimientos}
+
+Para el desarrollo de la práctica se ha usado el lenguaje de programación C++. Los motivos de esta decisión son: la familiaridad con el lenguaje de programación y el rendimiento superior a lenguajes de programación de alto nivel, conveniente para el tratamiento de grandes cantidades de datos, o la resolución de problemas computacionalmente intensivos.
+
+Para la compilación del código se ha usado el compilador g++ de GNU. La estructura del proyecto se ha configurado usando CMAKE. Para la ejecución de los programas se ha usado el sistema operativo Linux. Aunque al usar CMAKE se podría generar un proyecto para Windows.
+
+\newpage
+
+\subsection{Estructura del proyecto}
+
+El proyecto se ha estructurado de la siguiente manera:
+
+\dirtree{%
+	.1 software.
+	.2 memoria.pdf.
+	.2 README.md \DTcomment{Archivo con indicaciones del proyecto}.
+	.2 CMakeList.txt \DTcomment{Archivo de configuración CMAKE}.
+	.2 README.md \DTcomment{Archivo con instrucciones de ejecución y dependencias}.
+	.2 .vscode/ \DTcomment{Archivos de configuración de vscode}.
+	.3 c\_cpp\_properties.json.
+	.3 settings.json.
+	.2 Memoria/ \DTcomment{Carpeta con los archivos latex de la memoria de la práctica}.
+	.2 bin/ \DTcomment{Carpeta con los ejecutables del proyecto.}.
+	.2 build/ \DTcomment{Carpeta donde se recomienda generar los archivos de compilación de CMAKE en caso de compilar}.
+	.2 data/ \DTcomment{Carpeta con los archivos de datos relativos al proyecto}.
+	.3 instancias/ \DTcomment{1\*}.
+	.2 source/ \DTcomment{Carpeta con el código del proyecto}.
+	.3 src/ \DTcomment{Carpeta con los archivo *.cpp *.cc del proyecto}.
+	.3 demo/ \DTcomment{Archivos entregados por el profesor para testear la biblioteca RAndom y el uso del reloj interno}.
+	.3 include/ \DTcomment{Archivos de cabecera de c++}.
+	.3 tools/ \DTcomment{Herramientas externas al proyecto}.
+	.4 externo/ \DTcomment{Herrmamientas externas descargadas por el alumno}.
+	.5 fmt/ \DTcomment{Libreria de formateo de strings para la salida estandar de c++}.
+	.4 profesor/\DTcomment{Librerias dadas por el profesor}.
+}
+1\*: Carpeta con los archivos de datos relativos a las entradas del problema, si se quieren ejecutar nuevos test se deben poner en esta carpeta
+
+\subsection{Set Up}
+
+Se le entregará un archivo .zip llamado software que contendrá la estructura de directorios anterior. La carpeta build estará vacía por cuestiones obvias y en la carpeta bin se hallarán distintos ejecutables, todos del mismo código, compilado para varias plataformas directamente.
+
+Si su plataforma no está entre las pre-compiladas siga leyendo este apartado, sino, salte al apartado de ejecución.
+
+Si no puede ejecutar ninguno de los ejecutables. Deberá tener un compilador de c++ instalado en su computador y el programa \textbf{\textit{CMAKE}} y \textbf{\textit{make}}  para seguir con el tutorial.
+
+
+\subsubsection*{Linux}
+
+\begin{enumerate}
+	\item Abra una terminal en la raíz del proyecto
+	\item Si no está creada la carpeta build (que no debería), créela, sino pase al paso 3
+	      \begin{itemize}
+		      \item \begin{lstlisting}[language=bash]
+				mkdir build
+				\end{lstlisting}
+	      \end{itemize}
+	\item Acceda a la carpeta build e inicialice el proyecto
+	      \begin{itemize}
+		      \item \begin{lstlisting}[language=bash]
+				cd build
+				cmake ..
+				cd ..
+				cmake -DCMAKE_BUILD_TYPE=Debug -S . -B build
+				\end{lstlisting}
+	      \end{itemize}
+	\item Compile el programa
+	      \begin{itemize}
+		      \item \begin{lstlisting}[language=bash]
+				cmake --build build --target main
+				\end{lstlisting}
+	      \end{itemize}
+\end{enumerate}
+
+\subsubsection{Windows}
+
+El programa se ha escrito pensando en ejecutarse en Linux, si se tiene un sistema Windows lo que se recomienda es usar WSL, instalar el compilador de c++ GNU y CMAKE en esa máquina virtual y ejecutar desde ahí, siguiendo las instrucciones del apartado anterior.
+
+
+\subsection{Ejecución}
+
+Para la ejecución del programa se ha pensado en pasar los parámetros siempre por línea de comandos. El programa permite configurar que ejecutar y como de la siguiente manera:
+
+Por orden aparecen primeros los obligatorios y después los flags. Si llevan un guion delante, es un flag y, por tanto, optativo
+
+
+
+
+\subsubsection{Ejemplos de ejecuciones}
+
+
+
+\section{Analisis de Rendimiento}
+
+\section{Bibliografía}
+
+Principalmente, documentos de la universidad apoyados del siguiente libro:
+
+\url{https://www.google.com/search?q=The+algorithm+Design+Manual&oq=The+algorithm+Design+Manual&aqs=chrome..69i57.8716j0j1&sourceid=chrome&ie=UTF-8#wptab=si:AMnBZoEG3b_8oGF0zZDE6xv96fMHXP7HJH_MnzBXKd6lQPgr0x9FAhJbzhl-mXQs09va7tgfS0tmq9BAixznV7von37XNewIw_Um1FQ6wfaQI4rwDvhX1e-GXS_G0MX7E6K2fWcdKuVs64FZpIqGagHPROC0mvbWvcSAQYL-QLu2yIPStw0Zslk%3D}
+
+
+\end{document}

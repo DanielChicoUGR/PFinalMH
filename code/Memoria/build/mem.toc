@@ -1,0 +1,22 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {0.1}Resumen}{2}{section.0.1}%
+\contentsline {subsection}{\numberline {0.1.1}Grey Wolf Optimization}{2}{subsection.0.1.1}%
+\contentsline {subsubsection}{Formalización matemática}{2}{section*.3}%
+\contentsline {section}{\numberline {0.2}Análisis de Rendimientos}{4}{section.0.2}%
+\contentsline {subsection}{\numberline {0.2.1}1\% de Evaluaciones}{4}{subsection.0.2.1}%
+\contentsline {subsection}{\numberline {0.2.2}50\% de Evaluaciones}{4}{subsection.0.2.2}%
+\contentsline {subsection}{\numberline {0.2.3}100\% de Evaluaciones}{4}{subsection.0.2.3}%
+\contentsline {section}{\numberline {0.3}Hibridación y Análisis de Rendimiento}{4}{section.0.3}%
+\contentsline {subsection}{\numberline {0.3.1}Proceso de Hibridación}{4}{subsection.0.3.1}%
+\contentsline {subsection}{\numberline {0.3.2}Análisis del rendimiento}{4}{subsection.0.3.2}%
+\contentsline {subsubsection}{1\% de Evaluaciones}{4}{section*.5}%
+\contentsline {subsubsection}{50\% de Evaluaciones}{4}{section*.6}%
+\contentsline {subsubsection}{100\% de Evaluaciones}{4}{section*.7}%
+\contentsline {section}{\numberline {0.4}Procedimientos}{4}{section.0.4}%
+\contentsline {subsection}{\numberline {0.4.1}Estructura del proyecto}{5}{subsection.0.4.1}%
+\contentsline {subsection}{\numberline {0.4.2}Set Up}{5}{subsection.0.4.2}%
+\contentsline {subsubsection}{Windows}{6}{section*.9}%
+\contentsline {subsection}{\numberline {0.4.3}Ejecución}{6}{subsection.0.4.3}%
+\contentsline {subsubsection}{Ejemplos de ejecuciones}{6}{section*.10}%
+\contentsline {section}{\numberline {0.5}Analisis de Rendimiento}{6}{section.0.5}%
+\contentsline {section}{\numberline {0.6}Bibliografía}{6}{section.0.6}%

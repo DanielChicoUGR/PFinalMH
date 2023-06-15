@@ -1,0 +1,324 @@
+Detecting C OpenMP failed with the following output:
+Change Dir: /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-RkoIdY
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_abcd7/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_abcd7.dir/build.make CMakeFiles/cmTC_abcd7.dir/build
+gmake[1]: se entra en el directorio '/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-RkoIdY'
+Building C object CMakeFiles/cmTC_abcd7.dir/OpenMPTryFlag.c.o
+/usr/bin/clang   -fopenmp=libomp -v -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_abcd7.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_abcd7.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_abcd7.dir/OpenMPTryFlag.c.o -c /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-RkoIdY/OpenMPTryFlag.c
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/9
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-RkoIdY -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_abcd7.dir/OpenMPTryFlag.c.o.d -MT CMakeFiles/cmTC_abcd7.dir/OpenMPTryFlag.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-RkoIdY -ferror-limit 19 -fopenmp -fopenmp-target-new-runtime -fgnuc-version=4.2.1 -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_abcd7.dir/OpenMPTryFlag.c.o -x c /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-RkoIdY/OpenMPTryFlag.c
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/llvm-14/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+[1m/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-RkoIdY/OpenMPTryFlag.c:2:10: [0m[0;1;31mfatal error: [0m[1m'omp.h' file not found[0m
+#include <omp.h>
+[0;1;32m         ^~~~~~~
+[0m1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_abcd7.dir/build.make:79: CMakeFiles/cmTC_abcd7.dir/OpenMPTryFlag.c.o] Error 1
+gmake[1]: se sale del directorio '/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-RkoIdY'
+gmake: *** [Makefile:127: cmTC_abcd7/fast] Error 2
+
+
+
+Detecting C OpenMP failed with the following output:
+Change Dir: /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-TKQLaI
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ab5a3/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ab5a3.dir/build.make CMakeFiles/cmTC_ab5a3.dir/build
+gmake[1]: se entra en el directorio '/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-TKQLaI'
+Building C object CMakeFiles/cmTC_ab5a3.dir/OpenMPTryFlag.c.o
+/usr/bin/clang   -fopenmp=libiomp5 -v -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_ab5a3.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_ab5a3.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_ab5a3.dir/OpenMPTryFlag.c.o -c /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-TKQLaI/OpenMPTryFlag.c
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/9
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-TKQLaI -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_ab5a3.dir/OpenMPTryFlag.c.o.d -MT CMakeFiles/cmTC_ab5a3.dir/OpenMPTryFlag.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-TKQLaI -ferror-limit 19 -fopenmp -fopenmp-target-new-runtime -fgnuc-version=4.2.1 -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_ab5a3.dir/OpenMPTryFlag.c.o -x c /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-TKQLaI/OpenMPTryFlag.c
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/llvm-14/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+[1m/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-TKQLaI/OpenMPTryFlag.c:2:10: [0m[0;1;31mfatal error: [0m[1m'omp.h' file not found[0m
+#include <omp.h>
+[0;1;32m         ^~~~~~~
+[0m1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_ab5a3.dir/build.make:79: CMakeFiles/cmTC_ab5a3.dir/OpenMPTryFlag.c.o] Error 1
+gmake[1]: se sale del directorio '/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-TKQLaI'
+gmake: *** [Makefile:127: cmTC_ab5a3/fast] Error 2
+
+
+
+Detecting C OpenMP failed with the following output:
+Change Dir: /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-kvNxag
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_5e6bb/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_5e6bb.dir/build.make CMakeFiles/cmTC_5e6bb.dir/build
+gmake[1]: se entra en el directorio '/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-kvNxag'
+Building C object CMakeFiles/cmTC_5e6bb.dir/OpenMPTryFlag.c.o
+/usr/bin/clang   -fopenmp -v -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_5e6bb.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_5e6bb.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_5e6bb.dir/OpenMPTryFlag.c.o -c /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-kvNxag/OpenMPTryFlag.c
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/9
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-kvNxag -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_5e6bb.dir/OpenMPTryFlag.c.o.d -MT CMakeFiles/cmTC_5e6bb.dir/OpenMPTryFlag.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-kvNxag -ferror-limit 19 -fopenmp -fopenmp-target-new-runtime -fgnuc-version=4.2.1 -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_5e6bb.dir/OpenMPTryFlag.c.o -x c /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-kvNxag/OpenMPTryFlag.c
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/llvm-14/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+[1m/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-kvNxag/OpenMPTryFlag.c:2:10: [0m[0;1;31mfatal error: [0m[1m'omp.h' file not found[0m
+#include <omp.h>
+[0;1;32m         ^~~~~~~
+[0m1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_5e6bb.dir/build.make:79: CMakeFiles/cmTC_5e6bb.dir/OpenMPTryFlag.c.o] Error 1
+gmake[1]: se sale del directorio '/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-kvNxag'
+gmake: *** [Makefile:127: cmTC_5e6bb/fast] Error 2
+
+
+
+Detecting C OpenMP failed with the following output:
+Change Dir: /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-mpd0JD
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_d21c0/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d21c0.dir/build.make CMakeFiles/cmTC_d21c0.dir/build
+gmake[1]: se entra en el directorio '/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-mpd0JD'
+Building C object CMakeFiles/cmTC_d21c0.dir/OpenMPTryFlag.c.o
+/usr/bin/clang   -Xclang -fopenmp -v -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_d21c0.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_d21c0.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_d21c0.dir/OpenMPTryFlag.c.o -c /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-mpd0JD/OpenMPTryFlag.c
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/9
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-mpd0JD -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_d21c0.dir/OpenMPTryFlag.c.o.d -MT CMakeFiles/cmTC_d21c0.dir/OpenMPTryFlag.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-mpd0JD -ferror-limit 19 -fgnuc-version=4.2.1 -fcolor-diagnostics -fopenmp -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_d21c0.dir/OpenMPTryFlag.c.o -x c /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-mpd0JD/OpenMPTryFlag.c
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/llvm-14/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+[1m/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-mpd0JD/OpenMPTryFlag.c:2:10: [0m[0;1;31mfatal error: [0m[1m'omp.h' file not found[0m
+#include <omp.h>
+[0;1;32m         ^~~~~~~
+[0m1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_d21c0.dir/build.make:79: CMakeFiles/cmTC_d21c0.dir/OpenMPTryFlag.c.o] Error 1
+gmake[1]: se sale del directorio '/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-mpd0JD'
+gmake: *** [Makefile:127: cmTC_d21c0/fast] Error 2
+
+
+
+Detecting CXX OpenMP failed with the following output:
+Change Dir: /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-RbpdVk
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_baed4/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_baed4.dir/build.make CMakeFiles/cmTC_baed4.dir/build
+gmake[1]: se entra en el directorio '/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-RbpdVk'
+Building CXX object CMakeFiles/cmTC_baed4.dir/OpenMPTryFlag.cpp.o
+/usr/bin/clang++   -fopenmp=libomp -v -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_baed4.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_baed4.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_baed4.dir/OpenMPTryFlag.cpp.o -c /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-RbpdVk/OpenMPTryFlag.cpp
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/9
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-RbpdVk -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_baed4.dir/OpenMPTryFlag.cpp.o.d -MT CMakeFiles/cmTC_baed4.dir/OpenMPTryFlag.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/backward -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-RbpdVk -ferror-limit 19 -fopenmp -fopenmp-target-new-runtime -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_baed4.dir/OpenMPTryFlag.cpp.o -x c++ /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-RbpdVk/OpenMPTryFlag.cpp
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/backward
+ /usr/lib/llvm-14/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+[1m/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-RbpdVk/OpenMPTryFlag.cpp:2:10: [0m[0;1;31mfatal error: [0m[1m'omp.h' file not found[0m
+#include <omp.h>
+[0;1;32m         ^~~~~~~
+[0m1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_baed4.dir/build.make:79: CMakeFiles/cmTC_baed4.dir/OpenMPTryFlag.cpp.o] Error 1
+gmake[1]: se sale del directorio '/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-RbpdVk'
+gmake: *** [Makefile:127: cmTC_baed4/fast] Error 2
+
+
+
+Detecting CXX OpenMP failed with the following output:
+Change Dir: /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-U5vFMX
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_e8ec3/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_e8ec3.dir/build.make CMakeFiles/cmTC_e8ec3.dir/build
+gmake[1]: se entra en el directorio '/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-U5vFMX'
+Building CXX object CMakeFiles/cmTC_e8ec3.dir/OpenMPTryFlag.cpp.o
+/usr/bin/clang++   -fopenmp=libiomp5 -v -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_e8ec3.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_e8ec3.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_e8ec3.dir/OpenMPTryFlag.cpp.o -c /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-U5vFMX/OpenMPTryFlag.cpp
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/9
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-U5vFMX -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_e8ec3.dir/OpenMPTryFlag.cpp.o.d -MT CMakeFiles/cmTC_e8ec3.dir/OpenMPTryFlag.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/backward -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-U5vFMX -ferror-limit 19 -fopenmp -fopenmp-target-new-runtime -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_e8ec3.dir/OpenMPTryFlag.cpp.o -x c++ /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-U5vFMX/OpenMPTryFlag.cpp
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/backward
+ /usr/lib/llvm-14/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+[1m/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-U5vFMX/OpenMPTryFlag.cpp:2:10: [0m[0;1;31mfatal error: [0m[1m'omp.h' file not found[0m
+#include <omp.h>
+[0;1;32m         ^~~~~~~
+[0m1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_e8ec3.dir/build.make:79: CMakeFiles/cmTC_e8ec3.dir/OpenMPTryFlag.cpp.o] Error 1
+gmake[1]: se sale del directorio '/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-U5vFMX'
+gmake: *** [Makefile:127: cmTC_e8ec3/fast] Error 2
+
+
+
+Detecting CXX OpenMP failed with the following output:
+Change Dir: /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-SLoEDS
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_bc223/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_bc223.dir/build.make CMakeFiles/cmTC_bc223.dir/build
+gmake[1]: se entra en el directorio '/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-SLoEDS'
+Building CXX object CMakeFiles/cmTC_bc223.dir/OpenMPTryFlag.cpp.o
+/usr/bin/clang++   -fopenmp -v -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_bc223.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_bc223.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_bc223.dir/OpenMPTryFlag.cpp.o -c /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-SLoEDS/OpenMPTryFlag.cpp
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/9
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-SLoEDS -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_bc223.dir/OpenMPTryFlag.cpp.o.d -MT CMakeFiles/cmTC_bc223.dir/OpenMPTryFlag.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/backward -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-SLoEDS -ferror-limit 19 -fopenmp -fopenmp-target-new-runtime -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_bc223.dir/OpenMPTryFlag.cpp.o -x c++ /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-SLoEDS/OpenMPTryFlag.cpp
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/backward
+ /usr/lib/llvm-14/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+[1m/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-SLoEDS/OpenMPTryFlag.cpp:2:10: [0m[0;1;31mfatal error: [0m[1m'omp.h' file not found[0m
+#include <omp.h>
+[0;1;32m         ^~~~~~~
+[0m1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_bc223.dir/build.make:79: CMakeFiles/cmTC_bc223.dir/OpenMPTryFlag.cpp.o] Error 1
+gmake[1]: se sale del directorio '/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-SLoEDS'
+gmake: *** [Makefile:127: cmTC_bc223/fast] Error 2
+
+
+
+Detecting CXX OpenMP failed with the following output:
+Change Dir: /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-7j9jqI
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f8752/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f8752.dir/build.make CMakeFiles/cmTC_f8752.dir/build
+gmake[1]: se entra en el directorio '/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-7j9jqI'
+Building CXX object CMakeFiles/cmTC_f8752.dir/OpenMPTryFlag.cpp.o
+/usr/bin/clang++   -Xclang -fopenmp -v -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_f8752.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_f8752.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_f8752.dir/OpenMPTryFlag.cpp.o -c /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-7j9jqI/OpenMPTryFlag.cpp
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/9
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-7j9jqI -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_f8752.dir/OpenMPTryFlag.cpp.o.d -MT CMakeFiles/cmTC_f8752.dir/OpenMPTryFlag.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/backward -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-7j9jqI -ferror-limit 19 -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -fcolor-diagnostics -fopenmp -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_f8752.dir/OpenMPTryFlag.cpp.o -x c++ /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-7j9jqI/OpenMPTryFlag.cpp
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/backward
+ /usr/lib/llvm-14/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+[1m/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-7j9jqI/OpenMPTryFlag.cpp:2:10: [0m[0;1;31mfatal error: [0m[1m'omp.h' file not found[0m
+#include <omp.h>
+[0;1;32m         ^~~~~~~
+[0m1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_f8752.dir/build.make:79: CMakeFiles/cmTC_f8752.dir/OpenMPTryFlag.cpp.o] Error 1
+gmake[1]: se sale del directorio '/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-7j9jqI'
+gmake: *** [Makefile:127: cmTC_f8752/fast] Error 2
+
+
+

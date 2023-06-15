@@ -1,0 +1,1 @@
+/usr/bin/clang++ -g CMakeFiles/gwo.dir/src/gwo_main.cc.o -o /home/daniel/Proyectos/p4mh/code/bin/gwo  -Wl,-rpath,/home/daniel/Proyectos/p4mh/code/build libcec17_test_func.so libGWO_LIB.so 
