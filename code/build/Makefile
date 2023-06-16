@@ -272,7 +272,6 @@ src/gwo_main.o: src/gwo_main.cc.o
 # target to build an object file
 src/gwo_main.cc.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gwo.dir/build.make CMakeFiles/gwo.dir/src/gwo_main.cc.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cec17_test_func.dir/build.make CMakeFiles/cec17_test_func.dir/src/gwo_main.cc.o
 .PHONY : src/gwo_main.cc.o
 
 src/gwo_main.i: src/gwo_main.cc.i
@@ -281,7 +280,6 @@ src/gwo_main.i: src/gwo_main.cc.i
 # target to preprocess a source file
 src/gwo_main.cc.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gwo.dir/build.make CMakeFiles/gwo.dir/src/gwo_main.cc.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cec17_test_func.dir/build.make CMakeFiles/cec17_test_func.dir/src/gwo_main.cc.i
 .PHONY : src/gwo_main.cc.i
 
 src/gwo_main.s: src/gwo_main.cc.s
@@ -290,7 +288,6 @@ src/gwo_main.s: src/gwo_main.cc.s
 # target to generate assembly for a file
 src/gwo_main.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gwo.dir/build.make CMakeFiles/gwo.dir/src/gwo_main.cc.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cec17_test_func.dir/build.make CMakeFiles/cec17_test_func.dir/src/gwo_main.cc.s
 .PHONY : src/gwo_main.cc.s
 
 src/test.o: src/test.cc.o

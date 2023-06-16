@@ -26,12 +26,12 @@ Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" p
 The CXX compiler identification is Clang, found in "/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/3.25.2/CompilerIdCXX/a.out"
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-YcdJkT
+Change Dir: /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-oMjvoV
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_1fe40/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_1fe40.dir/build.make CMakeFiles/cmTC_1fe40.dir/build
-gmake[1]: Entering directory '/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-YcdJkT'
-Building C object CMakeFiles/cmTC_1fe40.dir/CMakeCCompilerABI.c.o
-/usr/bin/clang   -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_1fe40.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_1fe40.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_1fe40.dir/CMakeCCompilerABI.c.o -c /home/daniel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCCompilerABI.c
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_6cd6d/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_6cd6d.dir/build.make CMakeFiles/cmTC_6cd6d.dir/build
+gmake[1]: Entering directory '/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-oMjvoV'
+Building C object CMakeFiles/cmTC_6cd6d.dir/CMakeCCompilerABI.c.o
+/usr/bin/clang   -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_6cd6d.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_6cd6d.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_6cd6d.dir/CMakeCCompilerABI.c.o -c /home/daniel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCCompilerABI.c
 Ubuntu clang version 14.0.0-1ubuntu1
 Target: x86_64-pc-linux-gnu
 Thread model: posix
@@ -43,7 +43,7 @@ Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12
 Candidate multilib: .;@m64
 Selected multilib: .;@m64
  (in-process)
- "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-YcdJkT -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_1fe40.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_1fe40.dir/CMakeCCompilerABI.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-YcdJkT -ferror-limit 19 -fgnuc-version=4.2.1 -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_1fe40.dir/CMakeCCompilerABI.c.o -x c /home/daniel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCCompilerABI.c
+ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-oMjvoV -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_6cd6d.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_6cd6d.dir/CMakeCCompilerABI.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-oMjvoV -ferror-limit 19 -fgnuc-version=4.2.1 -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_6cd6d.dir/CMakeCCompilerABI.c.o -x c /home/daniel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCCompilerABI.c
 clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu
 ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include"
 ignoring nonexistent directory "/include"
@@ -54,9 +54,9 @@ ignoring nonexistent directory "/include"
  /usr/include/x86_64-linux-gnu
  /usr/include
 End of search list.
-Linking C executable cmTC_1fe40
-/home/daniel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/linux/x64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1fe40.dir/link.txt --verbose=1
-/usr/bin/clang  -v -rdynamic CMakeFiles/cmTC_1fe40.dir/CMakeCCompilerABI.c.o -o cmTC_1fe40 
+Linking C executable cmTC_6cd6d
+/home/daniel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/linux/x64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6cd6d.dir/link.txt --verbose=1
+/usr/bin/clang  -v -rdynamic CMakeFiles/cmTC_6cd6d.dir/CMakeCCompilerABI.c.o -o cmTC_6cd6d 
 Ubuntu clang version 14.0.0-1ubuntu1
 Target: x86_64-pc-linux-gnu
 Thread model: posix
@@ -67,8 +67,8 @@ Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/9
 Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12
 Candidate multilib: .;@m64
 Selected multilib: .;@m64
- "/usr/bin/ld" -pie -export-dynamic -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_1fe40 /lib/x86_64-linux-gnu/Scrt1.o /lib/x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtbeginS.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/12 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/lib/llvm-14/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_1fe40.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtendS.o /lib/x86_64-linux-gnu/crtn.o
-gmake[1]: Leaving directory '/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-YcdJkT'
+ "/usr/bin/ld" -pie -export-dynamic -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_6cd6d /lib/x86_64-linux-gnu/Scrt1.o /lib/x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtbeginS.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/12 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/lib/llvm-14/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_6cd6d.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtendS.o /lib/x86_64-linux-gnu/crtn.o
+gmake[1]: Leaving directory '/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-oMjvoV'
 
 
 
@@ -89,12 +89,12 @@ Parsed C implicit include dir info from above output: rv=done
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-YcdJkT]
+  ignore line: [Change Dir: /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-oMjvoV]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_1fe40/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_1fe40.dir/build.make CMakeFiles/cmTC_1fe40.dir/build]
-  ignore line: [gmake[1]: Entering directory '/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-YcdJkT']
-  ignore line: [Building C object CMakeFiles/cmTC_1fe40.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/clang   -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_1fe40.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_1fe40.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_1fe40.dir/CMakeCCompilerABI.c.o -c /home/daniel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCCompilerABI.c]
+  ignore line: [Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_6cd6d/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_6cd6d.dir/build.make CMakeFiles/cmTC_6cd6d.dir/build]
+  ignore line: [gmake[1]: Entering directory '/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-oMjvoV']
+  ignore line: [Building C object CMakeFiles/cmTC_6cd6d.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/clang   -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_6cd6d.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_6cd6d.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_6cd6d.dir/CMakeCCompilerABI.c.o -c /home/daniel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCCompilerABI.c]
   ignore line: [Ubuntu clang version 14.0.0-1ubuntu1]
   ignore line: [Target: x86_64-pc-linux-gnu]
   ignore line: [Thread model: posix]
@@ -108,7 +108,7 @@ Parsed C implicit link information from above output:
   ignore line: [Selected multilib: .]
   ignore line: [@m64]
   ignore line: [ (in-process)]
-  ignore line: [ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-YcdJkT -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_1fe40.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_1fe40.dir/CMakeCCompilerABI.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-YcdJkT -ferror-limit 19 -fgnuc-version=4.2.1 -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_1fe40.dir/CMakeCCompilerABI.c.o -x c /home/daniel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCCompilerABI.c]
+  ignore line: [ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-oMjvoV -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_6cd6d.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_6cd6d.dir/CMakeCCompilerABI.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-oMjvoV -ferror-limit 19 -fgnuc-version=4.2.1 -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_6cd6d.dir/CMakeCCompilerABI.c.o -x c /home/daniel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCCompilerABI.c]
   ignore line: [clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu]
   ignore line: [ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include"]
   ignore line: [ignoring nonexistent directory "/include"]
@@ -119,9 +119,9 @@ Parsed C implicit link information from above output:
   ignore line: [ /usr/include/x86_64-linux-gnu]
   ignore line: [ /usr/include]
   ignore line: [End of search list.]
-  ignore line: [Linking C executable cmTC_1fe40]
-  ignore line: [/home/daniel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/linux/x64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1fe40.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/clang  -v -rdynamic CMakeFiles/cmTC_1fe40.dir/CMakeCCompilerABI.c.o -o cmTC_1fe40 ]
+  ignore line: [Linking C executable cmTC_6cd6d]
+  ignore line: [/home/daniel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/linux/x64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6cd6d.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/clang  -v -rdynamic CMakeFiles/cmTC_6cd6d.dir/CMakeCCompilerABI.c.o -o cmTC_6cd6d ]
   ignore line: [Ubuntu clang version 14.0.0-1ubuntu1]
   ignore line: [Target: x86_64-pc-linux-gnu]
   ignore line: [Thread model: posix]
@@ -134,7 +134,7 @@ Parsed C implicit link information from above output:
   ignore line: [@m64]
   ignore line: [Selected multilib: .]
   ignore line: [@m64]
-  link line: [ "/usr/bin/ld" -pie -export-dynamic -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_1fe40 /lib/x86_64-linux-gnu/Scrt1.o /lib/x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtbeginS.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/12 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/lib/llvm-14/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_1fe40.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtendS.o /lib/x86_64-linux-gnu/crtn.o]
+  link line: [ "/usr/bin/ld" -pie -export-dynamic -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_6cd6d /lib/x86_64-linux-gnu/Scrt1.o /lib/x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtbeginS.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/12 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/lib/llvm-14/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_6cd6d.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtendS.o /lib/x86_64-linux-gnu/crtn.o]
     arg [/usr/bin/ld] ==> ignore
     arg [-pie] ==> ignore
     arg [-export-dynamic] ==> ignore
@@ -148,7 +148,7 @@ Parsed C implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_1fe40] ==> ignore
+    arg [cmTC_6cd6d] ==> ignore
     arg [/lib/x86_64-linux-gnu/Scrt1.o] ==> obj [/lib/x86_64-linux-gnu/Scrt1.o]
     arg [/lib/x86_64-linux-gnu/crti.o] ==> obj [/lib/x86_64-linux-gnu/crti.o]
     arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtbeginS.o] ==> obj [/usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtbeginS.o]
@@ -161,7 +161,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/llvm-14/bin/../lib] ==> dir [/usr/lib/llvm-14/bin/../lib]
     arg [-L/lib] ==> dir [/lib]
     arg [-L/usr/lib] ==> dir [/usr/lib]
-    arg [CMakeFiles/cmTC_1fe40.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_6cd6d.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -191,12 +191,12 @@ Parsed C implicit link information from above output:
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-6TPVmP
+Change Dir: /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-5mMNBI
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_49a3b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_49a3b.dir/build.make CMakeFiles/cmTC_49a3b.dir/build
-gmake[1]: Entering directory '/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-6TPVmP'
-Building CXX object CMakeFiles/cmTC_49a3b.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/clang++   -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_49a3b.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_49a3b.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_49a3b.dir/CMakeCXXCompilerABI.cpp.o -c /home/daniel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_05b76/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_05b76.dir/build.make CMakeFiles/cmTC_05b76.dir/build
+gmake[1]: Entering directory '/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-5mMNBI'
+Building CXX object CMakeFiles/cmTC_05b76.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/clang++   -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_05b76.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_05b76.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_05b76.dir/CMakeCXXCompilerABI.cpp.o -c /home/daniel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp
 Ubuntu clang version 14.0.0-1ubuntu1
 Target: x86_64-pc-linux-gnu
 Thread model: posix
@@ -208,7 +208,7 @@ Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12
 Candidate multilib: .;@m64
 Selected multilib: .;@m64
  (in-process)
- "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-6TPVmP -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_49a3b.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_49a3b.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/backward -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-6TPVmP -ferror-limit 19 -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_49a3b.dir/CMakeCXXCompilerABI.cpp.o -x c++ /home/daniel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp
+ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-5mMNBI -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_05b76.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_05b76.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/backward -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-5mMNBI -ferror-limit 19 -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_05b76.dir/CMakeCXXCompilerABI.cpp.o -x c++ /home/daniel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp
 clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu
 ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include"
 ignoring nonexistent directory "/include"
@@ -222,9 +222,9 @@ ignoring nonexistent directory "/include"
  /usr/include/x86_64-linux-gnu
  /usr/include
 End of search list.
-Linking CXX executable cmTC_49a3b
-/home/daniel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/linux/x64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_49a3b.dir/link.txt --verbose=1
-/usr/bin/clang++  -v -rdynamic CMakeFiles/cmTC_49a3b.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_49a3b 
+Linking CXX executable cmTC_05b76
+/home/daniel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/linux/x64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_05b76.dir/link.txt --verbose=1
+/usr/bin/clang++  -v -rdynamic CMakeFiles/cmTC_05b76.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_05b76 
 Ubuntu clang version 14.0.0-1ubuntu1
 Target: x86_64-pc-linux-gnu
 Thread model: posix
@@ -235,8 +235,8 @@ Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/9
 Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12
 Candidate multilib: .;@m64
 Selected multilib: .;@m64
- "/usr/bin/ld" -pie -export-dynamic -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_49a3b /lib/x86_64-linux-gnu/Scrt1.o /lib/x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtbeginS.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/12 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/lib/llvm-14/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_49a3b.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtendS.o /lib/x86_64-linux-gnu/crtn.o
-gmake[1]: Leaving directory '/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-6TPVmP'
+ "/usr/bin/ld" -pie -export-dynamic -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_05b76 /lib/x86_64-linux-gnu/Scrt1.o /lib/x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtbeginS.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/12 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/lib/llvm-14/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_05b76.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtendS.o /lib/x86_64-linux-gnu/crtn.o
+gmake[1]: Leaving directory '/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-5mMNBI'
 
 
 
@@ -263,12 +263,12 @@ Parsed CXX implicit include dir info from above output: rv=done
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-6TPVmP]
+  ignore line: [Change Dir: /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-5mMNBI]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_49a3b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_49a3b.dir/build.make CMakeFiles/cmTC_49a3b.dir/build]
-  ignore line: [gmake[1]: Entering directory '/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-6TPVmP']
-  ignore line: [Building CXX object CMakeFiles/cmTC_49a3b.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/clang++   -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_49a3b.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_49a3b.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_49a3b.dir/CMakeCXXCompilerABI.cpp.o -c /home/daniel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_05b76/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_05b76.dir/build.make CMakeFiles/cmTC_05b76.dir/build]
+  ignore line: [gmake[1]: Entering directory '/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-5mMNBI']
+  ignore line: [Building CXX object CMakeFiles/cmTC_05b76.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/clang++   -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_05b76.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_05b76.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_05b76.dir/CMakeCXXCompilerABI.cpp.o -c /home/daniel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp]
   ignore line: [Ubuntu clang version 14.0.0-1ubuntu1]
   ignore line: [Target: x86_64-pc-linux-gnu]
   ignore line: [Thread model: posix]
@@ -282,7 +282,7 @@ Parsed CXX implicit link information from above output:
   ignore line: [Selected multilib: .]
   ignore line: [@m64]
   ignore line: [ (in-process)]
-  ignore line: [ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-6TPVmP -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_49a3b.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_49a3b.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/backward -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-6TPVmP -ferror-limit 19 -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_49a3b.dir/CMakeCXXCompilerABI.cpp.o -x c++ /home/daniel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-5mMNBI -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_05b76.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_05b76.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/backward -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-5mMNBI -ferror-limit 19 -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_05b76.dir/CMakeCXXCompilerABI.cpp.o -x c++ /home/daniel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp]
   ignore line: [clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu]
   ignore line: [ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include"]
   ignore line: [ignoring nonexistent directory "/include"]
@@ -296,9 +296,9 @@ Parsed CXX implicit link information from above output:
   ignore line: [ /usr/include/x86_64-linux-gnu]
   ignore line: [ /usr/include]
   ignore line: [End of search list.]
-  ignore line: [Linking CXX executable cmTC_49a3b]
-  ignore line: [/home/daniel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/linux/x64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_49a3b.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/clang++  -v -rdynamic CMakeFiles/cmTC_49a3b.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_49a3b ]
+  ignore line: [Linking CXX executable cmTC_05b76]
+  ignore line: [/home/daniel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/linux/x64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_05b76.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/clang++  -v -rdynamic CMakeFiles/cmTC_05b76.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_05b76 ]
   ignore line: [Ubuntu clang version 14.0.0-1ubuntu1]
   ignore line: [Target: x86_64-pc-linux-gnu]
   ignore line: [Thread model: posix]
@@ -311,7 +311,7 @@ Parsed CXX implicit link information from above output:
   ignore line: [@m64]
   ignore line: [Selected multilib: .]
   ignore line: [@m64]
-  link line: [ "/usr/bin/ld" -pie -export-dynamic -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_49a3b /lib/x86_64-linux-gnu/Scrt1.o /lib/x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtbeginS.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/12 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/lib/llvm-14/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_49a3b.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtendS.o /lib/x86_64-linux-gnu/crtn.o]
+  link line: [ "/usr/bin/ld" -pie -export-dynamic -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_05b76 /lib/x86_64-linux-gnu/Scrt1.o /lib/x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtbeginS.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/12 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/lib/llvm-14/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_05b76.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtendS.o /lib/x86_64-linux-gnu/crtn.o]
     arg [/usr/bin/ld] ==> ignore
     arg [-pie] ==> ignore
     arg [-export-dynamic] ==> ignore
@@ -325,7 +325,7 @@ Parsed CXX implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_49a3b] ==> ignore
+    arg [cmTC_05b76] ==> ignore
     arg [/lib/x86_64-linux-gnu/Scrt1.o] ==> obj [/lib/x86_64-linux-gnu/Scrt1.o]
     arg [/lib/x86_64-linux-gnu/crti.o] ==> obj [/lib/x86_64-linux-gnu/crti.o]
     arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtbeginS.o] ==> obj [/usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtbeginS.o]
@@ -338,7 +338,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/llvm-14/bin/../lib] ==> dir [/usr/lib/llvm-14/bin/../lib]
     arg [-L/lib] ==> dir [/lib]
     arg [-L/usr/lib] ==> dir [/usr/lib]
-    arg [CMakeFiles/cmTC_49a3b.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_05b76.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -361,6 +361,300 @@ Parsed CXX implicit link information from above output:
   collapse library dir [/usr/lib] ==> [/usr/lib]
   implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
   implicit objs: [/lib/x86_64-linux-gnu/Scrt1.o;/lib/x86_64-linux-gnu/crti.o;/usr/lib/gcc/x86_64-linux-gnu/12/crtbeginS.o;/usr/lib/gcc/x86_64-linux-gnu/12/crtendS.o;/lib/x86_64-linux-gnu/crtn.o]
+  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/12;/usr/lib64;/lib/x86_64-linux-gnu;/lib64;/usr/lib/x86_64-linux-gnu;/usr/lib/llvm-14/lib;/lib;/usr/lib]
+  implicit fwks: []
+
+
+Detecting C OpenMP compiler ABI info compiled with the following output:
+Change Dir: /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-2ja5oS
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_85391/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_85391.dir/build.make CMakeFiles/cmTC_85391.dir/build
+gmake[1]: se entra en el directorio '/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-2ja5oS'
+Building C object CMakeFiles/cmTC_85391.dir/OpenMPTryFlag.c.o
+/usr/bin/clang   -fopenmp=libomp -v -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_85391.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_85391.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_85391.dir/OpenMPTryFlag.c.o -c /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-2ja5oS/OpenMPTryFlag.c
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/9
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-2ja5oS -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_85391.dir/OpenMPTryFlag.c.o.d -MT CMakeFiles/cmTC_85391.dir/OpenMPTryFlag.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-2ja5oS -ferror-limit 19 -fopenmp -fopenmp-target-new-runtime -fgnuc-version=4.2.1 -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_85391.dir/OpenMPTryFlag.c.o -x c /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-2ja5oS/OpenMPTryFlag.c
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/llvm-14/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+Linking C executable cmTC_85391
+/home/daniel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/linux/x64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_85391.dir/link.txt --verbose=1
+/usr/bin/clang  -fopenmp=libomp -v CMakeFiles/cmTC_85391.dir/OpenMPTryFlag.c.o -o cmTC_85391  -v 
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/9
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/usr/bin/ld" -pie -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_85391 /lib/x86_64-linux-gnu/Scrt1.o /lib/x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtbeginS.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/12 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/lib/llvm-14/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_85391.dir/OpenMPTryFlag.c.o -lomp -rpath /usr/lib/llvm-14/lib -lgcc --as-needed -lgcc_s --no-as-needed -lpthread -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtendS.o /lib/x86_64-linux-gnu/crtn.o
+gmake[1]: se sale del directorio '/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-2ja5oS'
+
+
+
+Parsed C OpenMP implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-2ja5oS]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_85391/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_85391.dir/build.make CMakeFiles/cmTC_85391.dir/build]
+  ignore line: [gmake[1]: se entra en el directorio '/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-2ja5oS']
+  ignore line: [Building C object CMakeFiles/cmTC_85391.dir/OpenMPTryFlag.c.o]
+  ignore line: [/usr/bin/clang   -fopenmp=libomp -v -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_85391.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_85391.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_85391.dir/OpenMPTryFlag.c.o -c /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-2ja5oS/OpenMPTryFlag.c]
+  ignore line: [Ubuntu clang version 14.0.0-1ubuntu1]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /usr/bin]
+  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11]
+  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12]
+  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/9]
+  ignore line: [Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12]
+  ignore line: [Candidate multilib: .]
+  ignore line: [@m64]
+  ignore line: [Selected multilib: .]
+  ignore line: [@m64]
+  ignore line: [ (in-process)]
+  ignore line: [ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-2ja5oS -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_85391.dir/OpenMPTryFlag.c.o.d -MT CMakeFiles/cmTC_85391.dir/OpenMPTryFlag.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-2ja5oS -ferror-limit 19 -fopenmp -fopenmp-target-new-runtime -fgnuc-version=4.2.1 -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_85391.dir/OpenMPTryFlag.c.o -x c /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-2ja5oS/OpenMPTryFlag.c]
+  ignore line: [clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu]
+  ignore line: [ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include"]
+  ignore line: [ignoring nonexistent directory "/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/lib/llvm-14/lib/clang/14.0.0/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /usr/include/x86_64-linux-gnu]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [Linking C executable cmTC_85391]
+  ignore line: [/home/daniel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/linux/x64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_85391.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/clang  -fopenmp=libomp -v CMakeFiles/cmTC_85391.dir/OpenMPTryFlag.c.o -o cmTC_85391  -v ]
+  ignore line: [Ubuntu clang version 14.0.0-1ubuntu1]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /usr/bin]
+  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11]
+  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12]
+  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/9]
+  ignore line: [Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12]
+  ignore line: [Candidate multilib: .]
+  ignore line: [@m64]
+  ignore line: [Selected multilib: .]
+  ignore line: [@m64]
+  link line: [ "/usr/bin/ld" -pie -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_85391 /lib/x86_64-linux-gnu/Scrt1.o /lib/x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtbeginS.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/12 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/lib/llvm-14/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_85391.dir/OpenMPTryFlag.c.o -lomp -rpath /usr/lib/llvm-14/lib -lgcc --as-needed -lgcc_s --no-as-needed -lpthread -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtendS.o /lib/x86_64-linux-gnu/crtn.o]
+    arg [/usr/bin/ld] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_85391] ==> ignore
+    arg [-L/usr/bin/../lib/gcc/x86_64-linux-gnu/12] ==> dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/12]
+    arg [-L/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../lib64] ==> dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../lib64]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/usr/lib/llvm-14/bin/../lib] ==> dir [/usr/lib/llvm-14/bin/../lib]
+    arg [-L/lib] ==> dir [/lib]
+    arg [-L/usr/lib] ==> dir [/usr/lib]
+    arg [CMakeFiles/cmTC_85391.dir/OpenMPTryFlag.c.o] ==> ignore
+    arg [-lomp] ==> lib [omp]
+    arg [-rpath] ==> ignore
+    arg [/usr/lib/llvm-14/lib] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lpthread] ==> lib [pthread]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+  collapse library dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/12] ==> [/usr/lib/gcc/x86_64-linux-gnu/12]
+  collapse library dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../lib64] ==> [/usr/lib64]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/usr/lib/llvm-14/bin/../lib] ==> [/usr/lib/llvm-14/lib]
+  collapse library dir [/lib] ==> [/lib]
+  collapse library dir [/usr/lib] ==> [/usr/lib]
+  implicit libs: [omp;gcc;gcc_s;pthread;c;gcc;gcc_s]
+  implicit objs: []
+  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/12;/usr/lib64;/lib/x86_64-linux-gnu;/lib64;/usr/lib/x86_64-linux-gnu;/usr/lib/llvm-14/lib;/lib;/usr/lib]
+  implicit fwks: []
+
+
+Detecting CXX OpenMP compiler ABI info compiled with the following output:
+Change Dir: /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-BMRfYK
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_6156b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_6156b.dir/build.make CMakeFiles/cmTC_6156b.dir/build
+gmake[1]: se entra en el directorio '/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-BMRfYK'
+Building CXX object CMakeFiles/cmTC_6156b.dir/OpenMPTryFlag.cpp.o
+/usr/bin/clang++   -fopenmp=libomp -v -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_6156b.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_6156b.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_6156b.dir/OpenMPTryFlag.cpp.o -c /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-BMRfYK/OpenMPTryFlag.cpp
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/9
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-BMRfYK -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_6156b.dir/OpenMPTryFlag.cpp.o.d -MT CMakeFiles/cmTC_6156b.dir/OpenMPTryFlag.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/backward -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-BMRfYK -ferror-limit 19 -fopenmp -fopenmp-target-new-runtime -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_6156b.dir/OpenMPTryFlag.cpp.o -x c++ /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-BMRfYK/OpenMPTryFlag.cpp
+clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/backward
+ /usr/lib/llvm-14/lib/clang/14.0.0/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+Linking CXX executable cmTC_6156b
+/home/daniel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/linux/x64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6156b.dir/link.txt --verbose=1
+/usr/bin/clang++  -fopenmp=libomp -v CMakeFiles/cmTC_6156b.dir/OpenMPTryFlag.cpp.o -o cmTC_6156b  -v 
+Ubuntu clang version 14.0.0-1ubuntu1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/9
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/usr/bin/ld" -pie -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_6156b /lib/x86_64-linux-gnu/Scrt1.o /lib/x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtbeginS.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/12 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/lib/llvm-14/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_6156b.dir/OpenMPTryFlag.cpp.o -lstdc++ -lm -lomp -rpath /usr/lib/llvm-14/lib -lgcc_s -lgcc -lpthread -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtendS.o /lib/x86_64-linux-gnu/crtn.o
+gmake[1]: se sale del directorio '/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-BMRfYK'
+
+
+
+Parsed CXX OpenMP implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-BMRfYK]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_6156b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_6156b.dir/build.make CMakeFiles/cmTC_6156b.dir/build]
+  ignore line: [gmake[1]: se entra en el directorio '/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-BMRfYK']
+  ignore line: [Building CXX object CMakeFiles/cmTC_6156b.dir/OpenMPTryFlag.cpp.o]
+  ignore line: [/usr/bin/clang++   -fopenmp=libomp -v -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_6156b.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_6156b.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_6156b.dir/OpenMPTryFlag.cpp.o -c /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-BMRfYK/OpenMPTryFlag.cpp]
+  ignore line: [Ubuntu clang version 14.0.0-1ubuntu1]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /usr/bin]
+  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11]
+  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12]
+  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/9]
+  ignore line: [Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12]
+  ignore line: [Candidate multilib: .]
+  ignore line: [@m64]
+  ignore line: [Selected multilib: .]
+  ignore line: [@m64]
+  ignore line: [ (in-process)]
+  ignore line: [ "/usr/lib/llvm-14/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-BMRfYK -resource-dir /usr/lib/llvm-14/lib/clang/14.0.0 -dependency-file CMakeFiles/cmTC_6156b.dir/OpenMPTryFlag.cpp.o.d -MT CMakeFiles/cmTC_6156b.dir/OpenMPTryFlag.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/backward -internal-isystem /usr/lib/llvm-14/lib/clang/14.0.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-BMRfYK -ferror-limit 19 -fopenmp -fopenmp-target-new-runtime -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_6156b.dir/OpenMPTryFlag.cpp.o -x c++ /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/CMakeScratch/TryCompile-BMRfYK/OpenMPTryFlag.cpp]
+  ignore line: [clang -cc1 version 14.0.0 based upon LLVM 14.0.0 default target x86_64-pc-linux-gnu]
+  ignore line: [ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include"]
+  ignore line: [ignoring nonexistent directory "/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12]
+  ignore line: [ /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12]
+  ignore line: [ /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/backward]
+  ignore line: [ /usr/lib/llvm-14/lib/clang/14.0.0/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /usr/include/x86_64-linux-gnu]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [Linking CXX executable cmTC_6156b]
+  ignore line: [/home/daniel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/linux/x64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6156b.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/clang++  -fopenmp=libomp -v CMakeFiles/cmTC_6156b.dir/OpenMPTryFlag.cpp.o -o cmTC_6156b  -v ]
+  ignore line: [Ubuntu clang version 14.0.0-1ubuntu1]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /usr/bin]
+  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11]
+  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12]
+  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/9]
+  ignore line: [Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12]
+  ignore line: [Candidate multilib: .]
+  ignore line: [@m64]
+  ignore line: [Selected multilib: .]
+  ignore line: [@m64]
+  link line: [ "/usr/bin/ld" -pie -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_6156b /lib/x86_64-linux-gnu/Scrt1.o /lib/x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtbeginS.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/12 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/lib/llvm-14/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_6156b.dir/OpenMPTryFlag.cpp.o -lstdc++ -lm -lomp -rpath /usr/lib/llvm-14/lib -lgcc_s -lgcc -lpthread -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtendS.o /lib/x86_64-linux-gnu/crtn.o]
+    arg [/usr/bin/ld] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_6156b] ==> ignore
+    arg [-L/usr/bin/../lib/gcc/x86_64-linux-gnu/12] ==> dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/12]
+    arg [-L/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../lib64] ==> dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../lib64]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/usr/lib/llvm-14/bin/../lib] ==> dir [/usr/lib/llvm-14/bin/../lib]
+    arg [-L/lib] ==> dir [/lib]
+    arg [-L/usr/lib] ==> dir [/usr/lib]
+    arg [CMakeFiles/cmTC_6156b.dir/OpenMPTryFlag.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lomp] ==> lib [omp]
+    arg [-rpath] ==> ignore
+    arg [/usr/lib/llvm-14/lib] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lpthread] ==> lib [pthread]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+  collapse library dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/12] ==> [/usr/lib/gcc/x86_64-linux-gnu/12]
+  collapse library dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../lib64] ==> [/usr/lib64]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/usr/lib/llvm-14/bin/../lib] ==> [/usr/lib/llvm-14/lib]
+  collapse library dir [/lib] ==> [/lib]
+  collapse library dir [/usr/lib] ==> [/usr/lib]
+  implicit libs: [stdc++;m;omp;gcc_s;gcc;pthread;c;gcc_s;gcc]
+  implicit objs: []
   implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/12;/usr/lib64;/lib/x86_64-linux-gnu;/lib64;/usr/lib/x86_64-linux-gnu;/usr/lib/llvm-14/lib;/lib;/usr/lib]
   implicit fwks: []
 

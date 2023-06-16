@@ -1,19 +1,21 @@
 """
 Local Search method Solis Wets
 """
-from numpy.random import uniform
-from numpy import clip, zeros
-
 from collections import namedtuple
+from numpy import clip, zeros
+from numpy.random import uniform
 
 EAresult = namedtuple("EAresult", "fitness solution evaluations")
 
+
 def _increm_bias(bias, dif):
     """Increm bias if it is successful"""
-    return 0.2*bias+0.4*(dif+bias)
+    return 0.2 * bias + 0.4 * (dif + bias)
+
 
 def _dec_bias(bias, dif):
-    return bias-0.4*(dif+bias)
+    return bias - 0.4 * (dif + bias)
+
 
 def soliswets(function, sol, fitness, lower, upper, maxevals, delta):
     """"
@@ -28,7 +30,7 @@ def soliswets(function, sol, fitness, lower, upper, maxevals, delta):
 
     while evals < maxevals:
         dif = uniform(0, delta, dim)
-        newsol = clip(sol+bias+dif, lower, upper)
+        newsol = clip(sol + bias + dif, lower, upper)
         new_fitness = function(newsol)
         evals += 1
 

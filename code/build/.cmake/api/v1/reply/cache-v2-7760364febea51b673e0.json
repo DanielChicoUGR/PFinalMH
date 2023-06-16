@@ -1146,6 +1146,42 @@
 			"value" : "FALSE"
 		},
 		{
+			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_OpenMP",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Details about finding OpenMP"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "[TRUE][TRUE][c ][v5.0()]"
+		},
+		{
+			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_C",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Details about finding OpenMP_C"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "[-fopenmp=libomp][/usr/lib/llvm-14/lib/libomp.so][/lib/x86_64-linux-gnu/libpthread.a][v5.0()]"
+		},
+		{
+			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_CXX",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Details about finding OpenMP_CXX"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "[-fopenmp=libomp][/usr/lib/llvm-14/lib/libomp.so][/lib/x86_64-linux-gnu/libpthread.a][v5.0()]"
+		},
+		{
 			"name" : "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp",
 			"properties" : 
 			[
@@ -1191,7 +1227,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "FALSE"
+			"value" : "TRUE"
 		},
 		{
 			"name" : "OpenMP_COMPILE_RESULT_C_Xclang fopenmp",
@@ -1239,7 +1275,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "FALSE"
+			"value" : "TRUE"
 		},
 		{
 			"name" : "OpenMP_CXX_FLAGS",
@@ -1255,7 +1291,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "NOTFOUND"
+			"value" : "-fopenmp=libomp"
 		},
 		{
 			"name" : "OpenMP_CXX_LIB_NAMES",
@@ -1271,7 +1307,19 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "NOTFOUND"
+			"value" : "omp;pthread"
+		},
+		{
+			"name" : "OpenMP_CXX_SPEC_DATE",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "CXX compiler's OpenMP specification date"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "201811"
 		},
 		{
 			"name" : "OpenMP_C_FLAGS",
@@ -1287,7 +1335,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "NOTFOUND"
+			"value" : "-fopenmp=libomp"
 		},
 		{
 			"name" : "OpenMP_C_LIB_NAMES",
@@ -1303,7 +1351,75 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "NOTFOUND"
+			"value" : "omp;pthread"
+		},
+		{
+			"name" : "OpenMP_C_SPEC_DATE",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "C compiler's OpenMP specification date"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "201811"
+		},
+		{
+			"name" : "OpenMP_SPECTEST_CXX_",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Result of TRY_COMPILE"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "TRUE"
+		},
+		{
+			"name" : "OpenMP_SPECTEST_C_",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Result of TRY_COMPILE"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "TRUE"
+		},
+		{
+			"name" : "OpenMP_omp_LIBRARY",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to the omp library for OpenMP"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/usr/lib/llvm-14/lib/libomp.so"
+		},
+		{
+			"name" : "OpenMP_pthread_LIBRARY",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to the pthread library for OpenMP"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/lib/x86_64-linux-gnu/libpthread.a"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",

@@ -6,5 +6,5 @@ CXX_DEFINES = -DGWO_LIB_EXPORTS
 
 CXX_INCLUDES = -I/home/daniel/Proyectos/p4mh/code/include
 
-CXX_FLAGS = -g -fPIC -fcolor-diagnostics
+CXX_FLAGS = -g -fPIC -fcolor-diagnostics -fopenmp=libomp
 

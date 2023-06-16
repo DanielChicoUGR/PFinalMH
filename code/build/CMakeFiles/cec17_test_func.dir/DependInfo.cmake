@@ -10,7 +10,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/daniel/Proyectos/p4mh/code/src/cec17.c" "CMakeFiles/cec17_test_func.dir/src/cec17.c.o" "gcc" "CMakeFiles/cec17_test_func.dir/src/cec17.c.o.d"
   "/home/daniel/Proyectos/p4mh/code/src/cec17_test_func.c" "CMakeFiles/cec17_test_func.dir/src/cec17_test_func.c.o" "gcc" "CMakeFiles/cec17_test_func.dir/src/cec17_test_func.c.o.d"
-  "/home/daniel/Proyectos/p4mh/code/src/gwo_main.cc" "CMakeFiles/cec17_test_func.dir/src/gwo_main.cc.o" "gcc" "CMakeFiles/cec17_test_func.dir/src/gwo_main.cc.o.d"
   )
 
 # Targets to which this target links.

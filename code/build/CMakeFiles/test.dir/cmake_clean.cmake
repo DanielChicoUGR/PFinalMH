@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/daniel/Proyectos/p4mh/code/bin/test"
-  "/home/daniel/Proyectos/p4mh/code/bin/test.pdb"
+  "/home/daniel/Proyectos/p4mh/code/test"
+  "/home/daniel/Proyectos/p4mh/code/test.pdb"
   "CMakeFiles/test.dir/src/test.cc.o"
   "CMakeFiles/test.dir/src/test.cc.o.d"
 )
