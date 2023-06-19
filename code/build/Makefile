@@ -194,6 +194,19 @@ GWO_LIB/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GWO_LIB.dir/build.make CMakeFiles/GWO_LIB.dir/build
 .PHONY : GWO_LIB/fast
 
+#=============================================================================
+# Target rules for targets named PARSER
+
+# Build rule for target.
+PARSER: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 PARSER
+.PHONY : PARSER
+
+# fast build rule for target.
+PARSER/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PARSER.dir/build.make CMakeFiles/PARSER.dir/build
+.PHONY : PARSER/fast
+
 src/cec17.o: src/cec17.c.o
 .PHONY : src/cec17.o
 
@@ -290,6 +303,30 @@ src/gwo_main.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gwo.dir/build.make CMakeFiles/gwo.dir/src/gwo_main.cc.s
 .PHONY : src/gwo_main.cc.s
 
+src/program_parser.o: src/program_parser.cpp.o
+.PHONY : src/program_parser.o
+
+# target to build an object file
+src/program_parser.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PARSER.dir/build.make CMakeFiles/PARSER.dir/src/program_parser.cpp.o
+.PHONY : src/program_parser.cpp.o
+
+src/program_parser.i: src/program_parser.cpp.i
+.PHONY : src/program_parser.i
+
+# target to preprocess a source file
+src/program_parser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PARSER.dir/build.make CMakeFiles/PARSER.dir/src/program_parser.cpp.i
+.PHONY : src/program_parser.cpp.i
+
+src/program_parser.s: src/program_parser.cpp.s
+.PHONY : src/program_parser.s
+
+# target to generate assembly for a file
+src/program_parser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PARSER.dir/build.make CMakeFiles/PARSER.dir/src/program_parser.cpp.s
+.PHONY : src/program_parser.cpp.s
+
 src/test.o: src/test.cc.o
 .PHONY : src/test.o
 
@@ -371,6 +408,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... GWO_LIB"
+	@echo "... PARSER"
 	@echo "... cec17_test_func"
 	@echo "... gwo"
 	@echo "... test"
@@ -388,6 +426,9 @@ help:
 	@echo "... src/gwo_main.o"
 	@echo "... src/gwo_main.i"
 	@echo "... src/gwo_main.s"
+	@echo "... src/program_parser.o"
+	@echo "... src/program_parser.i"
+	@echo "... src/program_parser.s"
 	@echo "... src/test.o"
 	@echo "... src/test.i"
 	@echo "... src/test.s"

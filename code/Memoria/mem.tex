@@ -158,28 +158,14 @@
     \begin{algorithm}[H]
         \caption{Grey Wolf Optimization}\label{alg:GWO}
         \begin{algorithmic}[1]
-            \Function{GWO}{$n\_sol$}
+            \Function{GWO}{$n\_sol,fitnes\_func$}
                 \State Inicializamos la población $X_i (i=1,...,N\_SOL)$
                 \State $func\_coste \gets create\_fitnes\_func(datos)$
-                \State $mejor\_solucion \gets GeneraSolucionAleatoria(datos.n)$
-                \State $mejor\_solucion \gets BL(datos, mejor\_solucion, 2000, k)$ \Comment{El parametro K controla el tamaño del entorno a explorar}
-                \State $mejor\_coste \gets func\_coste(mejor\_solucion)$
-                \State $k \gets 1$
-                \State $K\_MAX \gets datos.n$
-                \For{$i \gets 1$ \textbf{to} $N\_SOL-1$}
-                    \State $sol \gets mutacion\_ils(mejor\_solucion)$
-                    \State $sol \gets BL(datos, sol, 2000, k)$
-                    \State $costo\_nuevo \gets func\_coste(sol)$
-                    \If{$costo\_nuevo < mejor\_coste$}
-                        \State $mejor\_solucion \gets sol$
-                        \State $mejor\_coste \gets costo\_nuevo$
-                        \State $k \gets 1$
-                    \Else
-                        \State $k \gets k + 1$
-                    \EndIf
-                    \State $k \gets (k > K\_MAX) ? 1 : k$
-                \EndFor
-                \Return $mejor\_solucion$
+                \State for\_each(agente) $ \gets fitnes\_func(agente)$
+                \State $X_\alpha \gets$ Mejor Sol de la población
+                \State $X_\beta \gets$ Segunda mejor Sol de la población
+                \State $X_\delta \gets$ Tercera mejor Sol de la población
+                \State
             \EndFunction
 
 

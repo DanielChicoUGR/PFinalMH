@@ -1,3 +1,10 @@
 {
-    "cmake.sourceDirectory": "/home/daniel/Proyectos/p4mh/code"
+    "cmake.sourceDirectory": "/home/daniel/Proyectos/p4mh/code",
+    "files.associations": {
+        "array": "cpp",
+        "string_view": "cpp",
+        "initializer_list": "cpp",
+        "utility": "cpp",
+        "iostream": "cpp"
+    }
 }

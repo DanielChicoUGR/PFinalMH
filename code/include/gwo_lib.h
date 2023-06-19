@@ -26,6 +26,10 @@ struct wolf {
 
     wolf(std::vector<double> &sol) : fitness(0.0), sol(sol) {};
 
+    wolf() : fitness(0.0), sol() {};
+
+
+
 
     bool operator<(const wolf &rhs) const {
         return fitness < rhs.fitness;
@@ -69,6 +73,20 @@ struct wolf {
 };
 
 
+/**
+ * Runs the Grey Wolf optimizer for a given fitness function.
+ *
+ * @param fitnes The fitness function to optimize.
+ * @param min The minimum value for the search space.
+ * @param max The maximum value for the search space.
+ * @param dim The dimensionality of the search space.
+ * @param MAX_EVALS The maximum number of evaluations for the optimization.
+ * @param concurrent (optional) Whether to run the optimization concurrently. Defaults to false.
+ *
+ * @return A vector of double values representing the best solution found by the optimizer.
+ *
+ * @throws std::invalid_argument if min is greater than or equal to max or if dim is less than or equal to zero.
+ */
 std::vector<double>
 gwo(const std::function<double(double *)> &fitnes, double min, double max, int dim, int MAX_EVALS, bool concurrent=false);
 

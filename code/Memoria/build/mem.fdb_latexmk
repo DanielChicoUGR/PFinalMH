@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1686843616 "/home/daniel/Proyectos/p4mh/cec2017real/code/Memoria/mem.tex" "build/mem.pdf" "mem" 1686843618
+["pdflatex"] 1686987891 "/home/daniel/Proyectos/p4mh/code/Memoria/mem.tex" "build/mem.pdf" "mem" 1686987896
   "/etc/texmf/web2c/texmf.cnf" 1678187408 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/daniel/Proyectos/p4mh/cec2017real/code/Memoria/mem.tex" 1686843616 12285 e1a655e12eac4dadd14ea1bd9336adfc ""
+  "/home/daniel/Proyectos/p4mh/code/Memoria/mem.tex" 1686987889 12748 96f17d387eb017102444976744550a46 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/eccc1000.tfm" 1136768653 3072 0e825b3b77feef5bf88d50fba1209c90 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm" 1136768653 3584 adb004a0c8e7c46ee66cad73671f37b4 ""
@@ -49,6 +49,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1248133631 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texlive/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1575674566 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "/usr/share/texlive/texmf-dist/tex/generic/babel-spanish/spanish.ldf" 1622145181 26965 3b6d1655ad716f98e788b1fb9f2e87b8 ""
@@ -153,11 +154,11 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1678188176 4379155 98693266ff65f58d9f98aff394de12d2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1685962134 2800286 dcdbbbca27ed0b1432d1b184ef41843f ""
-  "build/mem.aux" 1686843618 3677 13177eacb4594b703d6ce8b8f5a48433 "pdflatex"
-  "build/mem.out" 1686843618 2324 af8ee136083a39d3a3a8214a5ade2458 "pdflatex"
-  "build/mem.toc" 1686843618 1715 ea61929b28b3754d0da465ca697e9ea6 "pdflatex"
+  "build/mem.aux" 1686987896 3734 75ea24681f571ee89fe5b13a658a3606 "pdflatex"
+  "build/mem.out" 1686987896 2324 af8ee136083a39d3a3a8214a5ade2458 "pdflatex"
+  "build/mem.toc" 1686987896 1715 d2d01a9bf1e17ab5d03175216e8e5311 "pdflatex"
   "logo.png" 1686826049 256624 daf92af884079233935592f2ae5a7396 ""
-  "mem.tex" 1686843616 12285 e1a655e12eac4dadd14ea1bd9336adfc ""
+  "mem.tex" 1686987889 12748 96f17d387eb017102444976744550a46 ""
   (generated)
   "build/mem.aux"
   "build/mem.log"

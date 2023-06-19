@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/daniel/Proyectos/p4mh/code/include
 
-CXX_FLAGS = -g -fcolor-diagnostics -fopenmp=libomp
+CXX_FLAGS = -O2 -g -DNDEBUG -fcolor-diagnostics -fopenmp=libomp -std=gnu++2b
 

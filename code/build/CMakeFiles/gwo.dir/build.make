@@ -94,6 +94,7 @@ gwo_EXTERNAL_OBJECTS =
 /home/daniel/Proyectos/p4mh/code/gwo: CMakeFiles/gwo.dir/build.make
 /home/daniel/Proyectos/p4mh/code/gwo: libcec17_test_func.so
 /home/daniel/Proyectos/p4mh/code/gwo: libGWO_LIB.so
+/home/daniel/Proyectos/p4mh/code/gwo: libPARSER.so
 /home/daniel/Proyectos/p4mh/code/gwo: /usr/lib/llvm-14/lib/libomp.so
 /home/daniel/Proyectos/p4mh/code/gwo: /lib/x86_64-linux-gnu/libpthread.a
 /home/daniel/Proyectos/p4mh/code/gwo: CMakeFiles/gwo.dir/link.txt

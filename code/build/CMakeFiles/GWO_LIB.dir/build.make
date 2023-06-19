@@ -92,8 +92,6 @@ GWO_LIB_EXTERNAL_OBJECTS =
 
 libGWO_LIB.so: CMakeFiles/GWO_LIB.dir/src/gwo_lib.cpp.o
 libGWO_LIB.so: CMakeFiles/GWO_LIB.dir/build.make
-libGWO_LIB.so: /usr/lib/llvm-14/lib/libomp.so
-libGWO_LIB.so: /lib/x86_64-linux-gnu/libpthread.a
 libGWO_LIB.so: CMakeFiles/GWO_LIB.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/daniel/Proyectos/p4mh/code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library libGWO_LIB.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GWO_LIB.dir/link.txt --verbose=$(VERBOSE)

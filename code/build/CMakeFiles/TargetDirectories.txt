@@ -4,5 +4,6 @@
 /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/gwo.dir
 /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/cec17_test_func.dir
 /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/GWO_LIB.dir
+/home/daniel/Proyectos/p4mh/code/build/CMakeFiles/PARSER.dir
 /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/edit_cache.dir
 /home/daniel/Proyectos/p4mh/code/build/CMakeFiles/rebuild_cache.dir
