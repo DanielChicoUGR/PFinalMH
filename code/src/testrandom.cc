@@ -10,7 +10,7 @@ using namespace std;
 
 int main() {
     vector<double> sol;
-    int dim = 10;
+    int dim = 50;
     int seed = 42;
     std::uniform_real_distribution<> dis(-100.0, 100.0);
 

@@ -4,6 +4,7 @@
 
 #include "gwo_lib.h"
 #include <iostream>
+#include "explotacion.h"
 
 
 std::vector<wolf> genera_soluciones_aleatorias(int N_soluciones, int dim, double min, double max) {

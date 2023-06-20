@@ -81,7 +81,7 @@ int main(int argc, char **argv) {
     for(int i=0;i<veces;i++) {
         fs::create_directories("results_gwo/"+std::to_string(dim)+"/r_" + std::to_string(i));
         std::string carpeta="gwo/"+std::to_string(dim)+"/r_" + std::to_string(i);
-//        progressBar(i*30,total);
+
 
         for (int funcid = 1; funcid <= 30; funcid++) {
             sol.resize(dim);
@@ -93,7 +93,7 @@ int main(int argc, char **argv) {
 
 
             fitness = cec17_fitness(&sol[0]);
-//            progressBar(i*30+funcid,total);
+
 
 
             std::cout << "Fitness[F" << funcid << "]: " << std::scientific << cec17_error(fitness) << std::endl;

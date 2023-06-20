@@ -272,7 +272,8 @@ CMakeFiles/GWO_LIB.dir/src/gwo_lib.cpp.o: /home/daniel/Proyectos/p4mh/code/src/g
   /usr/include/c++/12/array \
   /usr/include/c++/12/bits/move_only_function.h \
   /usr/include/c++/12/bits/mofunc_impl.h \
-  /usr/include/c++/12/iostream
+  /usr/include/c++/12/iostream \
+  /home/daniel/Proyectos/p4mh/code/include/explotacion.h
 
 
 /usr/include/c++/12/bits/move_only_function.h:
@@ -748,6 +749,8 @@ CMakeFiles/GWO_LIB.dir/src/gwo_lib.cpp.o: /home/daniel/Proyectos/p4mh/code/src/g
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/setjmp.h:
+
+/home/daniel/Proyectos/p4mh/code/include/explotacion.h:
 
 /usr/include/c++/12/string_view:
 

@@ -11,67 +11,72 @@
 #include <vector>
 #include <functional>
 
-#define POP_SIZE 50
 
+#define POP_SIZE 50
 
 using Random = effolkronium::random_static;
 
-
-struct wolf {
+struct wolf
+{
 
     double fitness = 0.0;
     std::vector<double> sol;
 
-    wolf(std::vector<double> &sol, double fitnes) : fitness(fitnes), sol(sol) {};
+    wolf(std::vector<double> &sol, double fitnes) : fitness(fitnes), sol(sol){};
 
-    wolf(std::vector<double> &sol) : fitness(0.0), sol(sol) {};
+    wolf(std::vector<double> &sol) : fitness(0.0), sol(sol){};
 
-    wolf() : fitness(0.0), sol() {};
+    wolf() : fitness(0.0), sol(){};
 
-
-
-
-    bool operator<(const wolf &rhs) const {
+    bool operator<(const wolf &rhs) const
+    {
         return fitness < rhs.fitness;
     }
 
-    bool operator>(const wolf &rhs) const {
+    bool operator>(const wolf &rhs) const
+    {
         return (rhs < *this);
     }
 
-    bool operator<=(const wolf &rhs) const {
+    bool operator<=(const wolf &rhs) const
+    {
         return (this->fitness <= rhs.fitness);
     }
 
-    bool operator>=(const wolf &rhs) const {
+    bool operator>=(const wolf &rhs) const
+    {
         return (rhs.fitness <= this->fitness);
     }
 
-    bool operator==(const wolf &rhs) const {
+    bool operator==(const wolf &rhs) const
+    {
         return this->sol == rhs.sol;
     }
 
-    bool operator!=(const wolf &rhs) const {
+    bool operator!=(const wolf &rhs) const
+    {
         return rhs.fitness != this->fitness;
     }
 
-
-    wolf &operator=(const wolf &rhs) {
+    wolf &operator=(const wolf &rhs)
+    {
         this->fitness = rhs.fitness;
         this->sol = rhs.sol;
         return *this;
     }
 
+    wolf& operator+=(const wolf &rhs){
+this->fitness=this->fitness+rhs.fitness;
+return *this;         
+    }
 
-    wolf &operator=(std::vector<double> rhs) {
+    wolf &operator=(std::vector<double> rhs)
+    {
         this->sol = std::move(rhs);
         fitness = 0;
         return *this;
     }
-
-
 };
-
 
 /**
  * Runs the Grey Wolf optimizer for a given fitness function.
@@ -88,6 +93,9 @@ struct wolf {
  * @throws std::invalid_argument if min is greater than or equal to max or if dim is less than or equal to zero.
  */
 std::vector<double>
-gwo(const std::function<double(double *)> &fitnes, double min, double max, int dim, int MAX_EVALS, bool concurrent=false);
+gwo(const std::function<double(double *)> &fitnes, double min, double max, int dim, int MAX_EVALS, bool concurrent = false);
 
-#endif //CODE_GWO_LIB_H
+
+std::vector<double> gwo_hibrido(const std::function<double(double *)> &fitnes, double min, double max, int dim, int MAX_EVALS);
+
+#endif // CODE_GWO_LIB_H

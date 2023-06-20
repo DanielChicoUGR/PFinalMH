@@ -28,13 +28,15 @@ ADD_EXECUTABLE(gwo ${SRC}/gwo_main.cc)
 
 ADD_LIBRARY("cec17_test_func" SHARED ${SRC}/cec17_test_func.c ${SRC}/cec17.c )
 
-add_library(GWO_LIB SHARED ${SRC}/gwo_lib.cpp)
+add_library(GWO_LIB SHARED ${SRC}/gwo_lib.cpp )
+add_library(EXPLOITATION SHARED ${SRC}/explotacion.cpp )
 add_library(PARSER  SHARED ${SRC}/program_parser.cpp)
 
+target_link_libraries(GWO_LIB EXPLOITATION)
 TARGET_LINK_LIBRARIES(test "cec17_test_func")
 TARGET_LINK_LIBRARIES(testrandom "cec17_test_func")
 TARGET_LINK_LIBRARIES(testsolis "cec17_test_func")
-#TARGET_LINK_LIBRARIES(gwo "cec17_test_func" "GWO_LIB" "PARSER")
+
 
 
 find_package(OpenMP)

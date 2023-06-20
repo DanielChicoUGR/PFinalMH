@@ -2,7 +2,7 @@
 \contentsline {section}{\numberline {0.1}Resumen}{1}{section.0.1}%
 \contentsline {subsection}{\numberline {0.1.1}Grey Wolf Optimization}{1}{subsection.0.1.1}%
 \contentsline {subsubsection}{Formalización matemática}{2}{section*.3}%
-\contentsline {section}{\numberline {0.2}Análisis de Rendimientos}{4}{section.0.2}%
+\contentsline {section}{\numberline {0.2}Análisis de Rendimientos}{3}{section.0.2}%
 \contentsline {subsection}{\numberline {0.2.1}1\% de Evaluaciones}{4}{subsection.0.2.1}%
 \contentsline {subsection}{\numberline {0.2.2}50\% de Evaluaciones}{4}{subsection.0.2.2}%
 \contentsline {subsection}{\numberline {0.2.3}100\% de Evaluaciones}{4}{subsection.0.2.3}%

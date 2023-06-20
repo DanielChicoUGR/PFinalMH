@@ -1,1 +1,1 @@
-/usr/bin/clang++ -O2 -g -DNDEBUG CMakeFiles/testrandom.dir/src/testrandom.cc.o -o /home/daniel/Proyectos/p4mh/code/testrandom  -Wl,-rpath,/home/daniel/Proyectos/p4mh/code/build libcec17_test_func.so 
+/usr/bin/clang++ -O3 -DNDEBUG CMakeFiles/testrandom.dir/src/testrandom.cc.o -o /home/daniel/Proyectos/p4mh/code/testrandom  -Wl,-rpath,/home/daniel/Proyectos/p4mh/code/build libcec17_test_func.so 

@@ -195,6 +195,19 @@ GWO_LIB/fast:
 .PHONY : GWO_LIB/fast
 
 #=============================================================================
+# Target rules for targets named EXPLOITATION
+
+# Build rule for target.
+EXPLOITATION: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 EXPLOITATION
+.PHONY : EXPLOITATION
+
+# fast build rule for target.
+EXPLOITATION/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EXPLOITATION.dir/build.make CMakeFiles/EXPLOITATION.dir/build
+.PHONY : EXPLOITATION/fast
+
+#=============================================================================
 # Target rules for targets named PARSER
 
 # Build rule for target.
@@ -254,6 +267,30 @@ src/cec17_test_func.s: src/cec17_test_func.c.s
 src/cec17_test_func.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cec17_test_func.dir/build.make CMakeFiles/cec17_test_func.dir/src/cec17_test_func.c.s
 .PHONY : src/cec17_test_func.c.s
+
+src/explotacion.o: src/explotacion.cpp.o
+.PHONY : src/explotacion.o
+
+# target to build an object file
+src/explotacion.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EXPLOITATION.dir/build.make CMakeFiles/EXPLOITATION.dir/src/explotacion.cpp.o
+.PHONY : src/explotacion.cpp.o
+
+src/explotacion.i: src/explotacion.cpp.i
+.PHONY : src/explotacion.i
+
+# target to preprocess a source file
+src/explotacion.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EXPLOITATION.dir/build.make CMakeFiles/EXPLOITATION.dir/src/explotacion.cpp.i
+.PHONY : src/explotacion.cpp.i
+
+src/explotacion.s: src/explotacion.cpp.s
+.PHONY : src/explotacion.s
+
+# target to generate assembly for a file
+src/explotacion.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EXPLOITATION.dir/build.make CMakeFiles/EXPLOITATION.dir/src/explotacion.cpp.s
+.PHONY : src/explotacion.cpp.s
 
 src/gwo_lib.o: src/gwo_lib.cpp.o
 .PHONY : src/gwo_lib.o
@@ -407,6 +444,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... EXPLOITATION"
 	@echo "... GWO_LIB"
 	@echo "... PARSER"
 	@echo "... cec17_test_func"
@@ -420,6 +458,9 @@ help:
 	@echo "... src/cec17_test_func.o"
 	@echo "... src/cec17_test_func.i"
 	@echo "... src/cec17_test_func.s"
+	@echo "... src/explotacion.o"
+	@echo "... src/explotacion.i"
+	@echo "... src/explotacion.s"
 	@echo "... src/gwo_lib.o"
 	@echo "... src/gwo_lib.i"
 	@echo "... src/gwo_lib.s"

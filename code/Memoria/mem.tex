@@ -137,7 +137,7 @@
         \item a $\rightarrow$ parametro que va de [2,0] y decrece linealmente con el paso de las iteraciones
     \end{itemize}
 
-    \newpage
+
     Aunque el proceso de caza es guiado por $\alpha,\beta$ y $\delta$, en un problema en un espacio de búsqueda abstracto, no sabemos la posición de la ''presa'' (solución, óptima o no), para simular la caza, se asume que la cuspide de la gerarquía estiman mejor la posición de la presa y por consiguiente guían al resto de la manada. Esto se puede formular de la siguiente manera:
 
 
@@ -158,14 +158,26 @@
     \begin{algorithm}[H]
         \caption{Grey Wolf Optimization}\label{alg:GWO}
         \begin{algorithmic}[1]
-            \Function{GWO}{$n\_sol,fitnes\_func$}
+            \Function{GWO}{$n\_sol,fitnes\_func,min,max,max_evals$}
                 \State Inicializamos la población $X_i (i=1,...,N\_SOL)$
-                \State $func\_coste \gets create\_fitnes\_func(datos)$
                 \State for\_each(agente) $ \gets fitnes\_func(agente)$
                 \State $X_\alpha \gets$ Mejor Sol de la población
                 \State $X_\beta \gets$ Segunda mejor Sol de la población
                 \State $X_\delta \gets$ Tercera mejor Sol de la población
-                \State
+                \State $Max\_iters=max\_evals/N_SOL$
+                \For{iter $\in$ Max\_Iters}
+                    \State $a=2*(1-(iter/max\_evals))$
+                    \State actualiza\_lobos (dim,poblacion,alpha,beta,delta,a)
+                    \State for\_each(agente) $ \gets fitnes\_func(agente)$
+
+                    \State $X_\alpha \gets$ Mejor Sol de la población
+                    \State $X_\beta \gets$ Segunda mejor Sol de la población
+                    \State $X_\delta \gets$ Tercera mejor Sol de la población
+
+
+                \EndFor
+
+                \Return $X_\alpha $
             \EndFunction
 
 
@@ -173,7 +185,44 @@
     \end{algorithm}
 
 
+    \begin{algorithm}[H]
+        \caption{Actualiza\_lobos}\label{alg:AW}
+        \begin{algorithmic}[1]
+            \Function{GWO}{$dim,poblacion,alpha,beta,delta,a$}
+                \For{$lobo \in Poblacion$}
+
+                    \State $D_\alpha=|C_1*X_\alpha(t)-X(t)| $
+                    \State $D_\beta=|C_2*X_\beta(t)-X(t)| $
+                    \State $D_\delta=|C_3*X_\delta(t)-X(t)| $
+                    \State $X_1=X_\alpha(t)-A_1*D_\alpha$
+                    \State $X_2=X_\beta(t)-A_2*D_\beta$
+                    \State $X_3=X_\delta(t)-A_3*D_\delta$
+                    \State $X(t+1)=\frac{X_1+X_2+X_3}{3}$ \Comment{Ajustamos la posición del agente como la media de los desplazamientos hacia $ \alpha,\beta,\delta$}
+                    
+                \Endfor
+                \Return poblacion
+            \EndFunction
+
+
+        \end{algorithmic}
+    \end{algorithm}
+
+
+
+
+
+
+
+
+
     \section{Análisis de Rendimientos}
+
+    Antes de entrar a valorar como de buena es la metaherística del GWO, se ha de tener en cuenta que las metaheurísticas al ser basadas en comportamientos animales o fenómenos físicos no tienen porqué dar siempre el resultado correcto.
+    Se intenta aproximar al mejor resultado explorado en el espacio de soluciones.     La calidad de las soluciones depende de si dicha mh se diseña/piensa para el tipo de problema. Las ejecuciones se han realizado con la semilla aleatoria 1.
+
+    La calidad de los resultados de la metaheurística se comprobarán a priori con otras 3 metaheurísticas proporcionadas por la web \web{https://tacolab.org} y contra un algoritmo que solo genere soluciones aleatorias.     Esto último podría sonar a algo que no aporta información, pero gracias a los teoremas de \textit{No free lunch} no se puede descartar esta metaheurística (en referencia a la aleatoria).     Tampoco sería un algoritmo a escoger para resolver un problema pero si que lo considero como una buena frontera, tanto en cuanto a superar en calidad de soluciones.
+
+
 
     \subsection{1\% de Evaluaciones}
 
