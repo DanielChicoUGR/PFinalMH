@@ -93,9 +93,9 @@ return *this;
  * @throws std::invalid_argument if min is greater than or equal to max or if dim is less than or equal to zero.
  */
 std::vector<double>
-gwo(const std::function<double(double *)> &fitnes, double min, double max, int dim, int MAX_EVALS, bool concurrent = false);
+gwo(const std::function<double(double *)> &fitnes, double min, double max, int dim, int MAX_EVALS);
 
 
-std::vector<double> gwo_hibrido(const std::function<double(double *)> &fitnes, double min, double max, int dim, int MAX_EVALS);
+std::vector<double> gwo_hibrido(const std::function<double(double *)> &fitnes, double min, double max, int dim, int MAX_EVALS,bool es=false);
 
 #endif // CODE_GWO_LIB_H

@@ -1,7 +1,8 @@
 //
 // Created by daniel on 15/06/23.
 //
-extern "C" {
+extern "C"
+{
 #include "cec17.h"
 }
 
@@ -11,99 +12,95 @@ extern "C" {
 #include "program_parser.h"
 #include <filesystem>
 
-namespace fs= std::filesystem;
+namespace fs = std::filesystem;
 
-void progressBar(int progress, int total)
+int main(int argc, char **argv)
 {
-    const int barWidth = 70;
-
-    // Calcular la proporción de progreso
-    float ratio = static_cast<float>(progress) / total;
-    int barLength = static_cast<int>(ratio * barWidth);
-
-    // Imprimir la barra de carga
-    std::cout<< "[";
-    for (int i = 0; i < barWidth; ++i)
-    {
-        if (i < barLength)
-        {
-            std::cout<< "=";
-        }
-        else
-        {
-            std::cout<< " ";
-        }
-    }
-    std::cout<< "]   "<<static_cast<int>(ratio * 100.0)<<"  %\r" ;  // \r devuelve el cursor al inicio de la linea en la que se esta imprimiendo, pudiendo sobreescribir caracteres.
-}
-
-
-int main(int argc, char **argv) {
     std::vector<double> sol;
     int dim, veces;
-    dim=10;
-    veces=10;
+    dim = 10;
+    veces = 10;
+    bool hibrido = false;
+    bool es = false;
 
-//   int seed=0;
-    int seed=time(nullptr);
+    //   int seed=0;
+    int seed = time(nullptr);
 
-    bool concurrent=false;
-    bool help=false;
+    bool concurrent = false;
+    bool help = false;
 
     CommandLine args("Optimizador GWO, Ningun Flag es obligatorio");
-    args.addArgument({"-d", "--dim"}, &dim, "Dimensión del problema (por defecto se ejecuta la aircuryersión mas simple (10) y los valores validos son {10,30,50}");
-    args.addArgument({"-c", "--concurrent", "Concurrent"}, &concurrent, "Concurrent");
-    args.addArgument({"-s", "--seed", "Semilla aleatoria"},&seed, "Semilla generadora de N_aleatorios");
-    args.addArgument({"-v", "--veces", "Repeticiones del test"},& veces, "Cuantas veces se va a ejecutar cada función");
+    args.addArgument({"-d", "--dim"}, &dim, "Dimensión del problema (por defecto se ejecuta la versión mas simple (10) y los valores validos son {10,30,50}");
+    args.addArgument({"-c", "--concurrent"}, &concurrent, "Concurrent");
+    args.addArgument({"-s", "--seed"}, &seed, "Semilla generadora de N_aleatorios");
+    args.addArgument({"-v", "--veces"}, &veces, "Cuantas veces se va a ejecutar cada función");
+    args.addArgument({"--hibrido"}, &hibrido, "Modelo Hibridado");
+    args.addArgument({"-es"}, &es, "Al ejecutar el modelo hibrido, ejecutar la busqueda local o el enfriamiento simulado, si no se indica se ejecuta la bl");
+
+    // ./gwo -s 1 -t 10 -hibrido -es -d 10
 
     args.addArgument({"-h", "--help", "Ayuda"}, &help, "Ayuda");
 
-
-    try {
+    try
+    {
         args.parse(argc, argv);
-    } catch (std::runtime_error const& e) {
+    }
+    catch (std::runtime_error const &e)
+    {
         std::cout << e.what() << std::endl;
         return -1;
     }
 
-    if(help){
+    if (help)
+    {
         args.printHelp();
         return 1;
     }
 
-    if(!(dim == 10 or dim == 30 or dim == 50)){
-        std::cerr<<"Error: Test functions are only defined for D=10,30,50."<<std::endl;
+    if (!(dim == 10 or dim == 30 or dim == 50))
+    {
+        std::cerr << "Error: Test functions are only defined for D=10,30,50." << std::endl;
         return -1;
     }
 
-//    auto total=veces*dim;
+    std::string ejecucion;
+    if (!hibrido)
+    {
+        ejecucion = "gwo/" + std::to_string(dim) + "/r_";
+    }
+    else
+    {
+        if (es)
+        {
+            ejecucion = "gwo_hibrido_es/" + std::to_string(dim) + "/r_";
+        }
+        else
+        {
+            ejecucion = "gwo_hibrido_bl/" + std::to_string(dim) + "/r_";
+        }
+    }
 
-    for(int i=0;i<veces;i++) {
-        fs::create_directories("results_gwo/"+std::to_string(dim)+"/r_" + std::to_string(i));
-        std::string carpeta="gwo/"+std::to_string(dim)+"/r_" + std::to_string(i);
+    for (int i = 0; i < veces; i++)
+    {
+        fs::create_directories("results_" + ejecucion + std::to_string(i));
+        std::string carpeta = ejecucion + std::to_string(i);
 
-
-        for (int funcid = 1; funcid <= 30; funcid++) {
+        for (int funcid = 1; funcid <= 30; funcid++)
+        {
             sol.resize(dim);
             double fitness;
 
             cec17_init(carpeta.c_str(), funcid, dim);
-
-            sol = gwo(cec17_fitness, -100.0, 100.0, dim, 10000 * dim, concurrent);
-
+            if (hibrido)
+                sol = gwo_hibrido(cec17_fitness, -100.0, 100.0, dim, 10000 * dim, es);
+            else
+                sol = gwo(cec17_fitness, -100.0, 100.0, dim, 10000 * dim);
 
             fitness = cec17_fitness(&sol[0]);
-
-
 
             std::cout << "Fitness[F" << funcid << "]: " << std::scientific << cec17_error(fitness) << std::endl;
         }
     }
 
     return 0;
-
-
 }
-
-
-

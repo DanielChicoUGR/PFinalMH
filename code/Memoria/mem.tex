@@ -61,283 +61,327 @@
 \begin{document}
 
 
-    \begin{titlepage}
-        \centering
-        \includegraphics[width=0.3\textwidth]{logo}\par\vspace{0.75cm}
-        {\Large Universidad de Granada \par}
-        \vspace{0.75cm}
-        {\large Departamento de Ciencias de la Computación e Inteligencia Artificial \par}
-        \vspace{1cm}
-        {\huge\bfseries Memoria de Prácticas Final de Metaheurísticas\par}
-        \vspace{1.25cm}
-        {\Large\itshape Daniel Chico\\DNI: 26508525J\\
+\begin{titlepage}
+    \centering
+    \includegraphics[width=0.3\textwidth]{logo}\par\vspace{0.75cm}
+    {\Large Universidad de Granada \par}
+    \vspace{0.75cm}
+    {\large Departamento de Ciencias de la Computación e Inteligencia Artificial \par}
+    \vspace{1cm}
+    {\huge\bfseries Memoria de Prácticas Final de Metaheurísticas\par}
+    \vspace{1.25cm}
+    {\Large\itshape Daniel Chico\\DNI: 26508525J\\
         Correo: dachival@correo.ugr.es\par}
-        \vfill
-        {\large\bfseries\itshape Práctica optativa: Implementación del GWO y comparativas aplicando el problema de la competición CEC2017\par}
-        \vfill
-        {\small Subgrupo: 3}
-        \vfill
-        {\small Horario: Miercoles (17.30/19.30)}
-        \vfill
-        {\small Tutor: Daniel Molina}
-        \vfill
-        {\small \today \par}
-
-        \begin{center}
-
-            \subsection*{Algoritmos Implementados:}
-            \begin{itemize}
-                \item Grey wolf Optimization
-                \item Grey Wolf Optimization - Búsqueda local
-                % \item Grey Wolf Optimization - Enfriamiento simulado
-            \end{itemize}
-
-        \end{center}
-
-
-    \end{titlepage}
-
-    \tableofcontents
-
-
-    \section{Resumen}\label{sec:resumen}
-
-    \subsection{Grey Wolf Optimization}
-
-    Para el desarrollo de la práctica alternativa decidí implementar una metaheurística basada en el lobo gris, a partir de ahora será GWO de sus siglas en inglés. Esta metaheurísticas se basa en el comportamiento de las manadas de lobos. Se basa en dos premisas, la gerarquía social dentro de la manada y las técnicas de caza.
-
-    De observar la gerarquía de los lobos se pueden distinguir 4 roles entre los que se dividen los individuos de una manada:
-    \begin{itemize}
-        \item $\alpha$: Los jefes de la manada, no son los mas fuertes sino los que tienen una mayor capacidad organizativa
-        \item $\beta$: Segundos en el escalafón, realizan tareas organizativas también y apoyan al $\alpha$
-        \item $\delta$: Tercer escalafón
-        \item $\omega$: últimos en la escala social de la manada, son unos mandados a efectos prácticos, también son los lobos más débiles de la manada.
-    \end{itemize}
-
-
-    A la hora de cazar los lobos persiguen a su presa hasta que consiguen rodearla y que esta se pare, a partir de ese momento empiezan a atacarlo poco a poco hasta que consigue su objetivo.
-
-    \subsubsection{Formalización matemática}
-    Por lo comentado anteriormente esta metaheurística se basa en modelos poblacionales en el que las peores soluciones de la población son consideradas $\omega_s$ y se modifican en función de un parametro aleatório y una \(''\)suma\(''\) de las distancias a las mejores soluciones. En este caso corresponderían a los lobos $\alpha$,$\beta$ y $\delta$. Este proceso difiere de como cazan los lobos ya que, en problemas de este tipo, no se puede 'divisar' a la presa (solución óptima) para perseguirla asi que se hace la asumpción de que las mejores soluciónes ''saben'' algo sobre la solución óptima e influyen en el comportamiento del resto de la población.
-
-    Durante el proceso de caza, los lobos tienden a rodear a su presa primero. matemáticamente se puede formular de la siguiente manera:
-    $$D=|C*X_p(t)-X(t)| $$
-    $$X(t+1)=X_p(t)-A*D$$
-    $$A=2ar_1-r_2$$
-    $$C=2r_2$$
-    Donde:
-    \begin{itemize}
-        \item t $\rightarrow$ Iteración actual
-        \item $X_p$ $\rightarrow$ Vector posición de la presa
-        \item X $\rightarrow$ Posicion de un lobo
-        \item A $\rightarrow$ Vector con coeficientes
-        \item D $\rightarrow$ Vector con coeficientes
-        \item $r_1$ $\rightarrow$ vector aleatorio con coef [0,1]
-        \item $r_2$ $\rightarrow$ vector aleatorio con coef [0,1]
-        \item a $\rightarrow$ parametro que va de [2,0] y decrece linealmente con el paso de las iteraciones
-    \end{itemize}
-
-
-    Aunque el proceso de caza es guiado por $\alpha,\beta$ y $\delta$, en un problema en un espacio de búsqueda abstracto, no sabemos la posición de la ''presa'' (solución, óptima o no), para simular la caza, se asume que la cuspide de la gerarquía estiman mejor la posición de la presa y por consiguiente guían al resto de la manada. Esto se puede formular de la siguiente manera:
-
-
-    \begin{itemize}
-        \item $D_\alpha=|C_1*X_\alpha(t)-X(t)| $
-        \item $D_\beta=|C_2*X_\beta(t)-X(t)| $
-        \item $D_\delta=|C_3*X_\delta(t)-X(t)| $
-        \item $X_1=X_\alpha(t)-A_1*D_\alpha$
-        \item $X_2=X_\beta(t)-A_2*D_\beta$
-        \item $X_3=X_\delta(t)-A_3*D_\delta$
-        \item $X(t+1)=\frac{X_1+X_2+X_3}{3}$
-    \end{itemize}
-
-
-    \subsubsection*{Pseudocódigo}
-
-
-    \begin{algorithm}[H]
-        \caption{Grey Wolf Optimization}\label{alg:GWO}
-        \begin{algorithmic}[1]
-            \Function{GWO}{$n\_sol,fitnes\_func,min,max,max_evals$}
-                \State Inicializamos la población $X_i (i=1,...,N\_SOL)$
-                \State for\_each(agente) $ \gets fitnes\_func(agente)$
-                \State $X_\alpha \gets$ Mejor Sol de la población
-                \State $X_\beta \gets$ Segunda mejor Sol de la población
-                \State $X_\delta \gets$ Tercera mejor Sol de la población
-                \State $Max\_iters=max\_evals/N_SOL$
-                \For{iter $\in$ Max\_Iters}
-                    \State $a=2*(1-(iter/max\_evals))$
-                    \State actualiza\_lobos (dim,poblacion,alpha,beta,delta,a)
-                    \State for\_each(agente) $ \gets fitnes\_func(agente)$
-
-                    \State $X_\alpha \gets$ Mejor Sol de la población
-                    \State $X_\beta \gets$ Segunda mejor Sol de la población
-                    \State $X_\delta \gets$ Tercera mejor Sol de la población
-
-
-                \EndFor
-
-                \Return $X_\alpha $
-            \EndFunction
-
-
-        \end{algorithmic}
-    \end{algorithm}
-
-
-    \begin{algorithm}[H]
-        \caption{Actualiza\_lobos}\label{alg:AW}
-        \begin{algorithmic}[1]
-            \Function{GWO}{$dim,poblacion,alpha,beta,delta,a$}
-                \For{$lobo \in Poblacion$}
-
-                    \State $D_\alpha=|C_1*X_\alpha(t)-X(t)| $
-                    \State $D_\beta=|C_2*X_\beta(t)-X(t)| $
-                    \State $D_\delta=|C_3*X_\delta(t)-X(t)| $
-                    \State $X_1=X_\alpha(t)-A_1*D_\alpha$
-                    \State $X_2=X_\beta(t)-A_2*D_\beta$
-                    \State $X_3=X_\delta(t)-A_3*D_\delta$
-                    \State $X(t+1)=\frac{X_1+X_2+X_3}{3}$ \Comment{Ajustamos la posición del agente como la media de los desplazamientos hacia $ \alpha,\beta,\delta$}
-                    
-                \Endfor
-                \Return poblacion
-            \EndFunction
-
-
-        \end{algorithmic}
-    \end{algorithm}
-
-
-
-
-
-
-
-
-
-    \section{Análisis de Rendimientos}
-
-    Antes de entrar a valorar como de buena es la metaherística del GWO, se ha de tener en cuenta que las metaheurísticas al ser basadas en comportamientos animales o fenómenos físicos no tienen porqué dar siempre el resultado correcto.
-    Se intenta aproximar al mejor resultado explorado en el espacio de soluciones.     La calidad de las soluciones depende de si dicha mh se diseña/piensa para el tipo de problema. Las ejecuciones se han realizado con la semilla aleatoria 1.
-
-    La calidad de los resultados de la metaheurística se comprobarán a priori con otras 3 metaheurísticas proporcionadas por la web \web{https://tacolab.org} y contra un algoritmo que solo genere soluciones aleatorias.     Esto último podría sonar a algo que no aporta información, pero gracias a los teoremas de \textit{No free lunch} no se puede descartar esta metaheurística (en referencia a la aleatoria).     Tampoco sería un algoritmo a escoger para resolver un problema pero si que lo considero como una buena frontera, tanto en cuanto a superar en calidad de soluciones.
-
-
-
-    \subsection{1\% de Evaluaciones}
-
-    \subsection{50\% de Evaluaciones}
-
-    \subsection{100\% de Evaluaciones}
-
-
-    \section{Hibridación y Análisis de Rendimiento}
-
-    \subsection{Proceso de Hibridación}
-
-    \subsection{Análisis del rendimiento}
-
-    \subsubsection{1\% de Evaluaciones}
-
-    \subsubsection{50\% de Evaluaciones}
-
-    \subsubsection{100\% de Evaluaciones}
-
-
-    \section{Procedimientos}
-
-    Para el desarrollo de la práctica se ha usado el lenguaje de programación C++. Los motivos de esta decisión son: la familiaridad con el lenguaje de programación y el rendimiento superior a lenguajes de programación de alto nivel, conveniente para el tratamiento de grandes cantidades de datos, o la resolución de problemas computacionalmente intensivos.
-
-    Para la compilación del código se ha usado el compilador g++ de GNU. La estructura del proyecto se ha configurado usando CMAKE. Para la ejecución de los programas se ha usado el sistema operativo Linux. Aunque al usar CMAKE se podría generar un proyecto para Windows.
-
-    \newpage
-
-    \subsection{Estructura del proyecto}
-
-    El proyecto se ha estructurado de la siguiente manera:
-
-    \dirtree{%
-        .1 software.
-        .2 memoria.pdf.
-        .2 README.md \DTcomment{Archivo con indicaciones del proyecto}.
-        .2 CMakeList.txt \DTcomment{Archivo de configuración CMAKE}.
-        .2 README.md \DTcomment{Archivo con instrucciones de ejecución y dependencias}.
-        .2 .vscode/ \DTcomment{Archivos de configuración de vscode}.
-        .3 c\_cpp\_properties.json.
-        .3 settings.json.
-        .2 Memoria/ \DTcomment{Carpeta con los archivos latex de la memoria de la práctica}.
-        .2 bin/ \DTcomment{Carpeta con los ejecutables del proyecto.}.
-        .2 build/ \DTcomment{Carpeta donde se recomienda generar los archivos de compilación de CMAKE en caso de compilar}.
-        .2 data/ \DTcomment{Carpeta con los archivos de datos relativos al proyecto}.
-        .3 instancias/ \DTcomment{1\*}.
-        .2 source/ \DTcomment{Carpeta con el código del proyecto}.
-        .3 src/ \DTcomment{Carpeta con los archivo *.cpp *.cc del proyecto}.
-        .3 demo/ \DTcomment{Archivos entregados por el profesor para testear la biblioteca RAndom y el uso del reloj interno}.
-        .3 include/ \DTcomment{Archivos de cabecera de c++}.
-        .3 tools/ \DTcomment{Herramientas externas al proyecto}.
-        .4 externo/ \DTcomment{Herrmamientas externas descargadas por el alumno}.
-        .5 fmt/ \DTcomment{Libreria de formateo de strings para la salida estandar de c++}.
-        .4 profesor/\DTcomment{Librerias dadas por el profesor}.
-    }
-    1\*: Carpeta con los archivos de datos relativos a las entradas del problema, si se quieren ejecutar nuevos test se deben poner en esta carpeta
-
-    \subsection{Set Up}
-
-    Se le entregará un archivo .zip llamado software que contendrá la estructura de directorios anterior. La carpeta build estará vacía por cuestiones obvias y en la carpeta bin se hallarán distintos ejecutables, todos del mismo código, compilado para varias plataformas directamente.
-
-    Si su plataforma no está entre las pre-compiladas siga leyendo este apartado, sino, salte al apartado de ejecución.
-
-    Si no puede ejecutar ninguno de los ejecutables. Deberá tener un compilador de c++ instalado en su computador y el programa \textbf{\textit{CMAKE}} y \textbf{\textit{make}}  para seguir con el tutorial.
-
-
-    \subsubsection*{Linux}
-
-    \begin{enumerate}
-        \item Abra una terminal en la raíz del proyecto
-        \item Si no está creada la carpeta build (que no debería), créela, sino pase al paso 3
+    \vfill
+    {\large\bfseries\itshape Práctica optativa: Implementación del GWO y comparativas aplicando el problema de la competición CEC2017\par}
+    \vfill
+    {\small Subgrupo: 3}
+    \vfill
+    {\small Horario: Miercoles (17.30/19.30)}
+    \vfill
+    {\small Tutor: Daniel Molina}
+    \vfill
+    {\small \today \par}
+
+    \begin{center}
+
+        \subsection*{Algoritmos Implementados:}
         \begin{itemize}
-            \item \begin{lstlisting}[language=bash]
+            \item Grey wolf Optimization
+            \item Grey Wolf Optimization - Búsqueda local
+                  % \item Grey Wolf Optimization - Enfriamiento simulado
+        \end{itemize}
+
+    \end{center}
+
+
+\end{titlepage}
+
+\tableofcontents
+
+
+\section{Resumen}\label{sec:resumen}
+
+\subsection{Grey Wolf Optimization}
+
+Para el desarrollo de la práctica alternativa decidí implementar una metaheurística basada en el lobo gris, a partir de ahora será GWO de sus siglas en inglés. Esta metaheurísticas se basa en el comportamiento de las manadas de lobos. Se basa en dos premisas, la gerarquía social dentro de la manada y las técnicas de caza.
+
+De observar la gerarquía de los lobos se pueden distinguir 4 roles entre los que se dividen los individuos de una manada:
+\begin{itemize}
+    \item $\alpha$: Los jefes de la manada, no son los mas fuertes sino los que tienen una mayor capacidad organizativa
+    \item $\beta$: Segundos en el escalafón, realizan tareas organizativas también y apoyan al $\alpha$
+    \item $\delta$: Tercer escalafón
+    \item $\omega$: últimos en la escala social de la manada, son unos mandados a efectos prácticos, también son los lobos más débiles de la manada.
+\end{itemize}
+
+
+A la hora de cazar los lobos persiguen a su presa hasta que consiguen rodearla y que esta se pare, a partir de ese momento empiezan a atacarlo poco a poco hasta que consigue su objetivo.
+
+\subsubsection{Formalización matemática}
+Por lo comentado anteriormente esta metaheurística se basa en modelos poblacionales en el que las peores soluciones de la población son consideradas $\omega_s$ y se modifican en función de un parametro aleatório y una \(''\)suma\(''\) de las distancias a las mejores soluciones. En este caso corresponderían a los lobos $\alpha$,$\beta$ y $\delta$. Este proceso difiere de como cazan los lobos ya que, en problemas de este tipo, no se puede 'divisar' a la presa (solución óptima) para perseguirla asi que se hace la asumpción de que las mejores soluciónes ''saben'' algo sobre la solución óptima e influyen en el comportamiento del resto de la población.
+
+Durante el proceso de caza, los lobos tienden a rodear a su presa primero. matemáticamente se puede formular de la siguiente manera:
+$$D=|C*X_p(t)-X(t)| $$
+$$X(t+1)=X_p(t)-A*D$$
+$$A=2ar_1-r_2$$
+$$C=2r_2$$
+Donde:
+\begin{itemize}
+    \item t $\rightarrow$ Iteración actual
+    \item $X_p$ $\rightarrow$ Vector posición de la presa
+    \item X $\rightarrow$ Posicion de un lobo
+    \item A $\rightarrow$ Vector con coeficientes
+    \item D $\rightarrow$ Vector con coeficientes
+    \item $r_1$ $\rightarrow$ vector aleatorio con coef [0,1]
+    \item $r_2$ $\rightarrow$ vector aleatorio con coef [0,1]
+    \item a $\rightarrow$ parametro que va de [2,0] y decrece linealmente con el paso de las iteraciones
+\end{itemize}
+
+
+Aunque el proceso de caza es guiado por $\alpha,\beta$ y $\delta$, en un problema en un espacio de búsqueda abstracto, no sabemos la posición de la ''presa'' (solución, óptima o no), para simular la caza, se asume que la cuspide de la gerarquía estiman mejor la posición de la presa y por consiguiente guían al resto de la manada. Esto se puede formular de la siguiente manera:
+
+
+\begin{itemize}
+    \item $D_\alpha=|C_1*X_\alpha(t)-X(t)| $
+    \item $D_\beta=|C_2*X_\beta(t)-X(t)| $
+    \item $D_\delta=|C_3*X_\delta(t)-X(t)| $
+    \item $X_1=X_\alpha(t)-A_1*D_\alpha$
+    \item $X_2=X_\beta(t)-A_2*D_\beta$
+    \item $X_3=X_\delta(t)-A_3*D_\delta$
+    \item $X(t+1)=\frac{X_1+X_2+X_3}{3}$
+\end{itemize}
+
+
+\subsubsection*{Pseudocódigo}
+
+
+\begin{algorithm}[H]
+    \caption{Grey Wolf Optimization}\label{alg:GWO}
+    \begin{algorithmic}[1]
+        \Function{GWO}{$n\_sol,fitnes\_func,min,max,max_evals$}
+        \State Inicializamos la población $X_i (i=1,...,N\_SOL)$
+        \State for\_each(agente) $ \gets fitnes\_func(agente)$
+        \State $X_\alpha \gets$ Mejor Sol de la población
+        \State $X_\beta \gets$ Segunda mejor Sol de la población
+        \State $X_\delta \gets$ Tercera mejor Sol de la población
+        \State $Max\_iters=max\_evals/N_SOL$
+        \For{iter $\in$ Max\_Iters}
+        \State $a=2*(1-(iter/max\_evals))$
+        \State actualiza\_lobos (dim,poblacion,alpha,beta,delta,a)
+        \State for\_each(agente) $ \gets fitnes\_func(agente)$
+
+        \State $X_\alpha \gets$ Mejor Sol de la población
+        \State $X_\beta \gets$ Segunda mejor Sol de la población
+        \State $X_\delta \gets$ Tercera mejor Sol de la población
+
+
+        \EndFor
+
+        \Return $X_\alpha $
+        \EndFunction
+
+
+    \end{algorithmic}
+\end{algorithm}
+
+
+\begin{algorithm}[H]
+    \caption{Actualiza\_lobos}\label{alg:AW}
+    \begin{algorithmic}[1]
+        \Function{GWO}{$dim,poblacion,alpha,beta,delta,a$}
+        \For{$lobo \in Poblacion$}
+
+        \State $D_\alpha=|C_1*X_\alpha(t)-X(t)| $
+        \State $D_\beta=|C_2*X_\beta(t)-X(t)| $
+        \State $D_\delta=|C_3*X_\delta(t)-X(t)| $
+        \State $X_1=X_\alpha(t)-A_1*D_\alpha$
+        \State $X_2=X_\beta(t)-A_2*D_\beta$
+        \State $X_3=X_\delta(t)-A_3*D_\delta$
+        \State $X(t+1)=\frac{X_1+X_2+X_3}{3}$ \Comment{Ajustamos la posición del agente como la media de los desplazamientos hacia $ \alpha,\beta,\delta$}
+
+        \EndFor
+
+        \Return $poblacion$
+        \EndFunction
+
+
+    \end{algorithmic}
+\end{algorithm}
+
+
+
+
+
+
+
+
+
+\section{Análisis de Rendimientos}
+
+Antes de entrar a valorar como de buena es la metaherística del GWO, se ha de tener en cuenta que las metaheurísticas al ser basadas en comportamientos animales o fenómenos físicos no tienen porqué dar siempre el resultado correcto.
+Se intenta aproximar al mejor resultado explorado en el espacio de soluciones.     La calidad de las soluciones depende de si dicha mh se diseña/piensa para el tipo de problema. Las ejecuciones se han realizado con la semilla aleatoria 1.
+
+La calidad de los resultados de la metaheurística se comprobarán a priori con otras 3 metaheurísticas proporcionadas por la web \url{https://tacolab.org} y contra un algoritmo que solo genere soluciones aleatorias.     Esto último podría sonar a algo que no aporta información, pero gracias a los teoremas de \textit{No free lunch} no se puede descartar esta metaheurística (en referencia a la aleatoria). Tampoco sería un algoritmo a escoger para resolver un problema pero si que lo considero como una buena frontera, tanto en cuanto a superar en calidad de soluciones.
+
+
+
+\subsection{1\% de Evaluaciones}
+
+\subsubsection*{Dimension 10}
+\input{Resultados/basico/d10/results_1.tex}
+\subsubsection*{Dimension 30}
+\input{Resultados/basico/d30/results_1.tex}
+\subsubsection*{Dimension 50}
+\input{Resultados/basico/d50/results_1.tex}
+
+
+\subsection{50\% de Evaluaciones}
+
+\subsubsection*{Dimension 10}
+\input{Resultados/basico/d10/results_50.tex}
+\subsubsection*{Dimension 30}
+\input{Resultados/basico/d30/results_50.tex}
+\subsubsection*{Dimension 50}
+\input{Resultados/basico/d50/results_50.tex}
+
+
+\subsection{100\% de Evaluaciones}
+
+
+\subsubsection*{Dimension 10}
+\input{Resultados/basico/d10/results_100.tex}
+\subsubsection*{Dimension 30}
+\input{Resultados/basico/d30/results_100.tex}
+\subsubsection*{Dimension 50}
+\input{Resultados/basico/d50/results_100.tex}
+
+
+\subsection{Media de puestos}
+
+\subsubsection*{D10}
+\input{Resultados/basico/d10/results_mean.tex}
+\includegraphics*[width=1\textwidth]{Resultados/basico/d10/Grafico_puestos.png} \label{img:ranking_D10}
+Aqui se puede ver la media de puestos para 10D. Siendo la cota a superar a priori el random vemos que se lo supera pero no por mucho. Menos al inicio de las iteraciones (donde el componente aleatorio tiene mas predominancia) que obtiene mejores resultados. Fijandonos también en la tabla \ref{table:1_ejecD10}.
+
+En la imagen \ref*{img:ranking_D10} se observa como para estas funciones para optimizar en 10 dimensiones, no sería muy distinto al algoritmo random conforme pasa el tiempo.
+
+
+\subsubsection*{D30}
+\input{Resultados/basico/d30/results_mean.tex}
+\includegraphics*[width=1\textwidth]{Resultados/basico/d10/Grafico_puestos.png} \label{img:ranking_D30}
+
+
+\subsubsection*{D30}
+\input{Resultados/basico/d30/results_mean.tex}
+\includegraphics*[width=1\textwidth]{Resultados/basico/d10/Grafico_puestos.png} \label{img:ranking_D30}
+
+\section{Hibridación y Análisis de Rendimiento}
+
+\subsection{Proceso de Hibridación}
+
+\subsection{Análisis del rendimiento}
+
+\subsubsection{1\% de Evaluaciones}
+
+\subsubsection{50\% de Evaluaciones}
+
+\subsubsection{100\% de Evaluaciones}
+
+
+\section{Procedimientos}
+
+Para el desarrollo de la práctica se ha usado el lenguaje de programación C++. Los motivos de esta decisión son: la familiaridad con el lenguaje de programación y el rendimiento superior a lenguajes de programación de alto nivel, conveniente para el tratamiento de grandes cantidades de datos, o la resolución de problemas computacionalmente intensivos.
+
+Para la compilación del código se ha usado el compilador g++ de GNU. La estructura del proyecto se ha configurado usando CMAKE. Para la ejecución de los programas se ha usado el sistema operativo Linux. Aunque al usar CMAKE se podría generar un proyecto para Windows.
+
+\newpage
+
+\subsection{Estructura del proyecto}
+
+El proyecto se ha estructurado de la siguiente manera:
+
+\dirtree{%
+    .1 software.
+    .2 memoria.pdf.
+    .2 README.md \DTcomment{Archivo con indicaciones del proyecto}.
+    .2 CMakeList.txt \DTcomment{Archivo de configuración CMAKE}.
+    .2 README.md \DTcomment{Archivo con instrucciones de ejecución y dependencias}.
+    .2 .vscode/ \DTcomment{Archivos de configuración de vscode}.
+    .3 c\_cpp\_properties.json.
+    .3 settings.json.
+    .2 Memoria/ \DTcomment{Carpeta con los archivos latex de la memoria de la práctica}.
+    .2 bin/ \DTcomment{Carpeta con los ejecutables del proyecto.}.
+    .2 build/ \DTcomment{Carpeta donde se recomienda generar los archivos de compilación de CMAKE en caso de compilar}.
+    .2 data/ \DTcomment{Carpeta con los archivos de datos relativos al proyecto}.
+    .3 instancias/ \DTcomment{1\*}.
+    .2 source/ \DTcomment{Carpeta con el código del proyecto}.
+    .3 src/ \DTcomment{Carpeta con los archivo *.cpp *.cc del proyecto}.
+    .3 demo/ \DTcomment{Archivos entregados por el profesor para testear la biblioteca RAndom y el uso del reloj interno}.
+    .3 include/ \DTcomment{Archivos de cabecera de c++}.
+    .3 tools/ \DTcomment{Herramientas externas al proyecto}.
+    .4 externo/ \DTcomment{Herrmamientas externas descargadas por el alumno}.
+    .5 fmt/ \DTcomment{Libreria de formateo de strings para la salida estandar de c++}.
+    .4 profesor/\DTcomment{Librerias dadas por el profesor}.
+}
+1\*: Carpeta con los archivos de datos relativos a las entradas del problema, si se quieren ejecutar nuevos test se deben poner en esta carpeta
+
+\subsection{Set Up}
+
+Se le entregará un archivo .zip llamado software que contendrá la estructura de directorios anterior. La carpeta build estará vacía por cuestiones obvias y en la carpeta bin se hallarán distintos ejecutables, todos del mismo código, compilado para varias plataformas directamente.
+
+Si su plataforma no está entre las pre-compiladas siga leyendo este apartado, sino, salte al apartado de ejecución.
+
+Si no puede ejecutar ninguno de los ejecutables. Deberá tener un compilador de c++ instalado en su computador y el programa \textbf{\textit{CMAKE}} y \textbf{\textit{make}}  para seguir con el tutorial.
+
+
+\subsubsection*{Linux}
+
+\begin{enumerate}
+    \item Abra una terminal en la raíz del proyecto
+    \item Si no está creada la carpeta build (que no debería), créela, sino pase al paso 3
+          \begin{itemize}
+              \item \begin{lstlisting}[language=bash]
 				mkdir build
             \end{lstlisting}
-        \end{itemize}
-        \item Acceda a la carpeta build e inicialice el proyecto
-        \begin{itemize}
-            \item \begin{lstlisting}[language=bash]
+          \end{itemize}
+    \item Acceda a la carpeta build e inicialice el proyecto
+          \begin{itemize}
+              \item \begin{lstlisting}[language=bash]
 				cd build
 				cmake ..
 				cd ..
 				cmake -DCMAKE_BUILD_TYPE=Debug -S . -B build
             \end{lstlisting}
-        \end{itemize}
-        \item Compile el programa
-        \begin{itemize}
-            \item \begin{lstlisting}[language=bash]
+          \end{itemize}
+    \item Compile el programa
+          \begin{itemize}
+              \item \begin{lstlisting}[language=bash]
 				cmake --build build --target main
             \end{lstlisting}
-        \end{itemize}
-    \end{enumerate}
+          \end{itemize}
+\end{enumerate}
 
-    \subsubsection{Windows}
+\subsubsection{Windows}
 
-    El programa se ha escrito pensando en ejecutarse en Linux, si se tiene un sistema Windows lo que se recomienda es usar WSL, instalar el compilador de c++ GNU y CMAKE en esa máquina virtual y ejecutar desde ahí, siguiendo las instrucciones del apartado anterior.
+El programa se ha escrito pensando en ejecutarse en Linux, si se tiene un sistema Windows lo que se recomienda es usar WSL, instalar el compilador de c++ GNU y CMAKE en esa máquina virtual y ejecutar desde ahí, siguiendo las instrucciones del apartado anterior.
 
-    \subsection{Ejecución}
+\subsection{Ejecución}
 
-    Para la ejecución del programa se ha pensado en pasar los parámetros siempre por línea de comandos. El programa permite configurar que ejecutar y como de la siguiente manera:
+Para la ejecución del programa se ha pensado en pasar los parámetros siempre por línea de comandos. El programa permite configurar que ejecutar y como de la siguiente manera:
 
-    Por orden aparecen primeros los obligatorios y después los flags. Si llevan un guion delante, es un flag y, por tanto, optativo
+Por orden aparecen primeros los obligatorios y después los flags. Si llevan un guion delante, es un flag y, por tanto, optativo
 
-    \subsubsection{Ejemplos de ejecuciones}
-
-
-    \section{Analisis de Rendimiento}
+\subsubsection{Ejemplos de ejecuciones}
 
 
-    \section{Bibliografía}
+\section{Analisis de Rendimiento}
 
-    Principalmente, documentos de la universidad apoyados del siguiente libro:
 
-    \url{https://www.google.com/search?q=The+algorithm+Design+Manual&oq=The+algorithm+Design+Manual&aqs=chrome..69i57.8716j0j1&sourceid=chrome&ie=UTF-8#wptab=si:AMnBZoEG3b_8oGF0zZDE6xv96fMHXP7HJH_MnzBXKd6lQPgr0x9FAhJbzhl-mXQs09va7tgfS0tmq9BAixznV7von37XNewIw_Um1FQ6wfaQI4rwDvhX1e-GXS_G0MX7E6K2fWcdKuVs64FZpIqGagHPROC0mvbWvcSAQYL-QLu2yIPStw0Zslk%3D}
+\section{Bibliografía}
+
+Principalmente, documentos de la universidad apoyados del siguiente libro:
+
+\url{https://www.google.com/search?q=The+algorithm+Design+Manual&oq=The+algorithm+Design+Manual&aqs=chrome..69i57.8716j0j1&sourceid=chrome&ie=UTF-8#wptab=si:AMnBZoEG3b_8oGF0zZDE6xv96fMHXP7HJH_MnzBXKd6lQPgr0x9FAhJbzhl-mXQs09va7tgfS0tmq9BAixznV7von37XNewIw_Um1FQ6wfaQI4rwDvhX1e-GXS_G0MX7E6K2fWcdKuVs64FZpIqGagHPROC0mvbWvcSAQYL-QLu2yIPStw0Zslk%3D}
 
 
 \end{document}
