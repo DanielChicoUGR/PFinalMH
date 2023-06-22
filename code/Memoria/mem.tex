@@ -289,6 +289,7 @@ Para decidir que versión comparar con el resto de algoritmos vamos a comparar l
 \includegraphics*[width=0.5\textwidth]{Resultados/hibrido/Interno/D10/media_posicion.png} \label{img:media_posicion_D10_comparativa}
 
 \input{Resultados/hibrido/Interno/D10/results_mean.tex}
+\includegraphics*[width=0.5\textwidth]{Resultados/hibrido/Interno/D10/ev_error.png} \label{img:error_D10_comparativa}
 
 \subsubsection*{Dimensión 30}
 
@@ -296,13 +297,14 @@ Para decidir que versión comparar con el resto de algoritmos vamos a comparar l
 
 \input{Resultados/hibrido/Interno/D30/results_mean.tex}
 
-\subsubsection*{title}
+\includegraphics*[width=0.5\textwidth]{Resultados/hibrido/Interno/D30/ev_error.png} \label{img:error_D30_comparativa}
+
+\subsubsection*{Analisis y toma de decisiones}
+Ambas versiones proporcionan unos mejores resultados. Siendo la versión de enfriamiento simulado la que gana por poco. Por los resultados de las prácticas tenía cierta noción de que enfriamiento simulado funciona mejor. Ahora con estos resultados, y despues de probarlos en dos tipos de problemas puedo confirmarlo. La probailidad de aceptar peores soluciones hace que se estanque en menos minimos locáles y acabe acercandose más a los minimos globales. También queda claro que, aunque el algoritmo base del GWO tiene mecanismos para explotar el entorno siempre viene bién utilizar metaheurísticas pensadas para ese objetivo ya que tenderán a mejorar más los resultados.
+
+Para el análisis con el resto de algoritmos usaré a partir de ahora el algoritmo hibridado con la búsqueda local. Esta será la versión que se ejecute por defecto en el ejecutable cuando se escoja la version hibridada. Para mas información al respecto acuda a \ref{subsec:set-up}
 
 
-% \begin{itemize}
-%     \item Para dimensión 10 $\rightarrow$\includegraphics*[width=0.5\textwidth]{Resultados/hibrido/Interno/D10/media_posicion.png}
-%     \item Para dimensión 30 $\rightarrow$\includegraphics*[width=0.5\textwidth]{Resultados/hibrido/Interno/D30/media_posicion.png}
-% \end{itemize}
 
 \subsection{Análisis del rendimiento}
 
@@ -339,7 +341,7 @@ El proyecto se ha estructurado de la siguiente manera:
 }
 
 
-\subsection{Set Up}
+\subsection{Set Up} \label{subsec:set-up}
 
 Se le entregará un archivo .zip llamado software que contendrá la estructura de directorios anterior. La carpeta build estará vacía por cuestiones obvias y en la carpeta bin se hallarán distintos ejecutables, todos del mismo código, compilado para varias plataformas directamente.
 
