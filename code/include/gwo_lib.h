@@ -12,7 +12,7 @@
 #include <functional>
 
 
-#define POP_SIZE 50
+#define POP_SIZE 10
 
 using Random = effolkronium::random_static;
 

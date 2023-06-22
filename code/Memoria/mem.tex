@@ -1,3 +1,4 @@
+
 \documentclass[a4paper, 12.5pt]{report}
 
 \usepackage[utf8]{inputenc}
@@ -151,6 +152,13 @@ Aunque el proceso de caza es guiado por $\alpha,\beta$ y $\delta$, en un problem
     \item $X(t+1)=\frac{X_1+X_2+X_3}{3}$
 \end{itemize}
 
+\subsubsection{Características de la Metaheurística}
+
+Es una metaheurística de caracter poblacional, en el que cada lobo es representado como una solución concreta. El tamaño de la muestra, se recomienda que sea de entre 5 y 12 individuos con el objetivo de intentar simular al máximo las manadas de lobos grises salvajes (cuyo numero de integrantes oscila entre esos valores en libertad). Tras varias pruebas he determinado que el tamaño de población que mejor se ajusta al problema es 10 aunque dejo como duda que pasaría si la manda fuera mas grande (llegando a 50 individuos como por ejemplo la práctica 2 donde implementamos técnicas poblacionales con ese número de soluciones para explorar).
+
+
+El caracter estocástico que tiene esta ''mh'' viene dado por la aparición de dos vectores de vlaores aleatorios que intervienen en el valor de $\vec{A}$ y $\vec{C}$. Para controlar cuando el algoritmo explora y cuando explota el vecindario, se tiene un parametro A que va linealmente de $2 \rightarrow 0$ linealmente a lo largo de las iteraciones. Cuando este parametro es mayor que 1, el agente se desplaza una mayor distancia en la dirección de la presa, ''Saltandosela'' pero explorando otros entornos que pueden dar mejoras soluciones. Cuando este parametro es menor a 1 estas actualizaciones desplazan la solución una menor distancia consiguiendo explotar el entorno definido por los $\alpha,\beta,\delta$.
+
 
 \subsubsection*{Pseudocódigo}
 
@@ -158,7 +166,7 @@ Aunque el proceso de caza es guiado por $\alpha,\beta$ y $\delta$, en un problem
 \begin{algorithm}[H]
     \caption{Grey Wolf Optimization}\label{alg:GWO}
     \begin{algorithmic}[1]
-        \Function{GWO}{$n\_sol,fitnes\_func,min,max,max_evals$}
+        \Function{GWO}{$n\_sol,fitnes\_func,min,max,max\_evals$}
         \State Inicializamos la población $X_i (i=1,...,N\_SOL)$
         \State for\_each(agente) $ \gets fitnes\_func(agente)$
         \State $X_\alpha \gets$ Mejor Sol de la población
@@ -225,59 +233,76 @@ La calidad de los resultados de la metaheurística se comprobarán a priori con 
 
 
 
-\subsection{1\% de Evaluaciones}
+\subsection{D10}
 
-\subsubsection*{Dimension 10}
+\subsubsection*{1\% Ejecuciones}
 \input{Resultados/basico/d10/results_1.tex}
-\subsubsection*{Dimension 30}
-\input{Resultados/basico/d30/results_1.tex}
-\subsubsection*{Dimension 50}
-\input{Resultados/basico/d50/results_1.tex}
+\subsubsection*{50\% Ejecuciones}
 
-
-\subsection{50\% de Evaluaciones}
-
-\subsubsection*{Dimension 10}
 \input{Resultados/basico/d10/results_50.tex}
-\subsubsection*{Dimension 30}
-\input{Resultados/basico/d30/results_50.tex}
-\subsubsection*{Dimension 50}
-\input{Resultados/basico/d50/results_50.tex}
-
-
-\subsection{100\% de Evaluaciones}
-
-
-\subsubsection*{Dimension 10}
+\subsubsection*{100\% Ejecuciones}
 \input{Resultados/basico/d10/results_100.tex}
-\subsubsection*{Dimension 30}
-\input{Resultados/basico/d30/results_100.tex}
-\subsubsection*{Dimension 50}
-\input{Resultados/basico/d50/results_100.tex}
 
-
-\subsection{Media de puestos}
-
-\subsubsection*{D10}
+\subsubsection*{Media Puestos}
 \input{Resultados/basico/d10/results_mean.tex}
 \includegraphics*[width=1\textwidth]{Resultados/basico/d10/Grafico_puestos.png} \label{img:ranking_D10}
+
+
 Aqui se puede ver la media de puestos para 10D. Siendo la cota a superar a priori el random vemos que se lo supera pero no por mucho. Menos al inicio de las iteraciones (donde el componente aleatorio tiene mas predominancia) que obtiene mejores resultados. Fijandonos también en la tabla \ref{table:1_ejecD10}.
 
-En la imagen \ref*{img:ranking_D10} se observa como para estas funciones para optimizar en 10 dimensiones, no sería muy distinto al algoritmo random conforme pasa el tiempo.
+En la imagen \ref*{img:ranking_D10} Se puede ver como para D10, esta metaheurística no hace un mejor trabajo que otras técnicas más usadas y conocidas. Es más, para este tipo de funciones, cuando el nuemero de iteraciones se acerca al límite no genera una mejor solución que el algoritmo Random lo cual deja mucho que desear si se quiere usar esta metaheurística para optimizar una función similar.
 
 
-\subsubsection*{D30}
+\subsection{D30}
+
+\subsubsection*{1\% Ejecuciones}
+
+\input{Resultados/basico/d30/results_1.tex}
+\subsubsection*{50\% Ejecuciones}
+\input{Resultados/basico/d30/results_50.tex}
+
+\subsubsection*{100\% Ejecuciones}
+\input{Resultados/basico/d30/results_100.tex}
+
+\subsubsection*{Media Puestos}
 \input{Resultados/basico/d30/results_mean.tex}
-\includegraphics*[width=1\textwidth]{Resultados/basico/d10/Grafico_puestos.png} \label{img:ranking_D30}
+\includegraphics*[width=1\textwidth]{Resultados/basico/d30/Grafico_puestos.png} \label{img:ranking_D30}
+Nuevamente se observa como el algoritmo directamente no es capaz de combatir contra otras metaheurísticas en estos problemas. Por lo que tengo entendido y tras hablar con Daniel (profesor de prácticas), Esta mh se diseñó y testeó con funciones cuyo mínimo se encuentra en el centro del espacio de solución o muy cerca. A tener en cuenta que a diferencia de rendimiento en PSO entre los dos tipos de problemas. Que puede ser debido a los propios operadores del algoritmo que sesguen el espacio de búsqueda.
 
 
-\subsubsection*{D30}
-\input{Resultados/basico/d30/results_mean.tex}
-\includegraphics*[width=1\textwidth]{Resultados/basico/d10/Grafico_puestos.png} \label{img:ranking_D30}
 
 \section{Hibridación y Análisis de Rendimiento}
 
+Para hibridar el algoritmo de GWO he probado dos versiones. La primera sería una búsqueda local con las características indicadas en el guión de la práctica 1 para el problema del APC. Y la segunda correspondería al algoritmo de Enfriamiento simulado, el cuál usa el esquema de enfriamiento de Cauchí modificado explicado en la práctica 3 de la asignatura, se mantienen otras características indicadas en los guines en los algoritmos implementados.
+
+
+
 \subsection{Proceso de Hibridación}
+
+Tanto para el modelo híbrido con enfriamiento simulado como para el de búsqueda local se dan como máximo 200 evaluaciones por ejecución del algoritmo. Estos se ejecutan cada 20 iteraciones sobre los lobos $X_\alpha,X_\beta,X_\delta$ después de calcular los desplazamientos y los nuevos fittnes.
+
+Para decidir que versión comparar con el resto de algoritmos vamos a comparar la version sin hibridar con las otras dos y compararemos la versión hibrida que mejor resultados dé en comparación con su contrincante.
+
+
+\subsubsection*{Dimensión 10}
+
+\includegraphics*[width=0.5\textwidth]{Resultados/hibrido/Interno/D10/media_posicion.png} \label{img:media_posicion_D10_comparativa}
+
+\input{Resultados/hibrido/Interno/D10/results_mean.tex}
+
+\subsubsection*{Dimensión 30}
+
+\includegraphics*[width=0.5\textwidth]{Resultados/hibrido/Interno/D30/media_posicion.png} \label{img:media_posicion_D30_comparativa}
+
+\input{Resultados/hibrido/Interno/D30/results_mean.tex}
+
+\subsubsection*{title}
+
+
+% \begin{itemize}
+%     \item Para dimensión 10 $\rightarrow$\includegraphics*[width=0.5\textwidth]{Resultados/hibrido/Interno/D10/media_posicion.png}
+%     \item Para dimensión 30 $\rightarrow$\includegraphics*[width=0.5\textwidth]{Resultados/hibrido/Interno/D30/media_posicion.png}
+% \end{itemize}
 
 \subsection{Análisis del rendimiento}
 
@@ -292,38 +317,27 @@ En la imagen \ref*{img:ranking_D10} se observa como para estas funciones para op
 
 Para el desarrollo de la práctica se ha usado el lenguaje de programación C++. Los motivos de esta decisión son: la familiaridad con el lenguaje de programación y el rendimiento superior a lenguajes de programación de alto nivel, conveniente para el tratamiento de grandes cantidades de datos, o la resolución de problemas computacionalmente intensivos.
 
-Para la compilación del código se ha usado el compilador g++ de GNU. La estructura del proyecto se ha configurado usando CMAKE. Para la ejecución de los programas se ha usado el sistema operativo Linux. Aunque al usar CMAKE se podría generar un proyecto para Windows.
-
-\newpage
+Para la compilación del código se ha usado el compilador clang. La estructura del proyecto se ha configurado usando CMAKE. Para la ejecución de los programas se ha usado el sistema operativo Linux. Aunque al usar CMAKE se podría generar un proyecto para Windows.
 
 \subsection{Estructura del proyecto}
 
 El proyecto se ha estructurado de la siguiente manera:
 
+
 \dirtree{%
-    .1 software.
-    .2 memoria.pdf.
-    .2 README.md \DTcomment{Archivo con indicaciones del proyecto}.
-    .2 CMakeList.txt \DTcomment{Archivo de configuración CMAKE}.
-    .2 README.md \DTcomment{Archivo con instrucciones de ejecución y dependencias}.
-    .2 .vscode/ \DTcomment{Archivos de configuración de vscode}.
-    .3 c\_cpp\_properties.json.
-    .3 settings.json.
-    .2 Memoria/ \DTcomment{Carpeta con los archivos latex de la memoria de la práctica}.
-    .2 bin/ \DTcomment{Carpeta con los ejecutables del proyecto.}.
-    .2 build/ \DTcomment{Carpeta donde se recomienda generar los archivos de compilación de CMAKE en caso de compilar}.
-    .2 data/ \DTcomment{Carpeta con los archivos de datos relativos al proyecto}.
-    .3 instancias/ \DTcomment{1\*}.
-    .2 source/ \DTcomment{Carpeta con el código del proyecto}.
-    .3 src/ \DTcomment{Carpeta con los archivo *.cpp *.cc del proyecto}.
-    .3 demo/ \DTcomment{Archivos entregados por el profesor para testear la biblioteca RAndom y el uso del reloj interno}.
-    .3 include/ \DTcomment{Archivos de cabecera de c++}.
-    .3 tools/ \DTcomment{Herramientas externas al proyecto}.
-    .4 externo/ \DTcomment{Herrmamientas externas descargadas por el alumno}.
-    .5 fmt/ \DTcomment{Libreria de formateo de strings para la salida estandar de c++}.
-    .4 profesor/\DTcomment{Librerias dadas por el profesor}.
+    .1 code.
+    .2 SRC \DTcomment{Carpeta con el código fuente del proyecto}.
+    .2 INCLUDE \DTcomment{Carpeta con los archivos de cabecera del proyecto}.
+    .2 Input\_data \DTcomment{Carpeta con los datos para ejecutar los algoritmos}.
+    .2 CMakeList.text \DTcomment{Archivo de configuración CMAKE}.
+    .2 build \DTcomment{Carpeta donde se recomienda generar los archivos de compilación de CMAKE en caso de compilar}.
+    .2 extract\_all.py \DTcomment{Archivo de ejecución de extract.py}.
+    .2 extract.py \DTcomment{Genera una hoja de calculo con los archivos de resultado}.
+    .2 genera\_medias.py \DTcomment{Genera la media de las distintas ejecuciones en una hoja de calculo para su posterior analisis}.
+    .2 Modifica\_tablas.py \DTcomment{Modifica las tablas en latex de \url{tacolab.org} para que estén bien formateadas}.
+    .2 Memoria.pdf.
 }
-1\*: Carpeta con los archivos de datos relativos a las entradas del problema, si se quieren ejecutar nuevos test se deben poner en esta carpeta
+
 
 \subsection{Set Up}
 
@@ -370,12 +384,6 @@ El programa se ha escrito pensando en ejecutarse en Linux, si se tiene un sistem
 Para la ejecución del programa se ha pensado en pasar los parámetros siempre por línea de comandos. El programa permite configurar que ejecutar y como de la siguiente manera:
 
 Por orden aparecen primeros los obligatorios y después los flags. Si llevan un guion delante, es un flag y, por tanto, optativo
-
-\subsubsection{Ejemplos de ejecuciones}
-
-
-\section{Analisis de Rendimiento}
-
 
 \section{Bibliografía}
 
