@@ -7,5 +7,5 @@ build/
 
 code/build/*
 results_*
-.cache/*s
+.cache/*
 
