@@ -1,4 +1,4 @@
-\documentclass[a4paper, 12.5pt]{report}
+\documentclass[a4paper]{report}
 
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
@@ -150,6 +150,8 @@ Aunque el proceso de caza es guiado por $\alpha,\beta$ y $\delta$, en un problem
     \item $X_3=X_\delta(t)-A_3*D_\delta$
     \item $X(t+1)=\frac{X_1+X_2+X_3}{3}$
 \end{itemize}
+
+El formalismo matemático puede ser encontrado con mas riqueza en el articulo original de la metaheuristica  \cite{MIRJALILI201446}
 
 \subsubsection{Características de la Metaheurística}
 
@@ -323,21 +325,6 @@ Para decidir que versión comparar con el resto de algoritmos vamos a comparar l
 
 
 
-% \begin{figure}[H]
-%     \caption{Comparativa GWO vs GWO+LS vs GWO+SA}
-%     \centering
-%     \begin{subfigure}[b]{0.49\textwidth}
-
-
-%     \end{subfigure}
-%     \begin{subfigure}[b]{0.49\textwidth}
-
-
-%     \end{subfigure}
-
-% \end{figure}
-
-
 \input{Resultados/hibrido/Interno/D10/results_mean.tex}
 
 
@@ -472,39 +459,90 @@ El pseudocdigo del algoritmo de reprodución sería:
 
 \section{Análisis del rendimiento con Mejoras}
 
-Enn este apartado compararemos la versión básica del algoritmo, la versión con el operador de reproducción extra y una hibridación de la versión básica del algoritmo. Se compararán con los algoritmos ya usados anteriormente para compara. EL \textit{PSO},\textit{DE} y \textit{MOS}.
+En este apartado compararemos la versión básica del algoritmo, la versión con el operador de reproducción extra y una hibridación de la versión básica del algoritmo. Se compararán con los algoritmos ya usados anteriormente para compara. EL \textit{PSO},\textit{DE} y \textit{MOS}. Primero se comparán las distintas versiones del algoritmo entre si y luego se compararán con los algoritmos anteriormente indicados.
 
-\subsubsection*{D10}
-% \input{Resultados/hibrido/Externo/D10/results_100}
+\subsection{D10}
 
-% \input{Resultados/hibrido/Externo/D10/results_mean}
+\subsubsection{Comparativa interna}
+
+
+\input{Resultados/Analisis_final/D10/GWO/results_100.tex}
+
+\input{Resultados/Analisis_final/D10/GWO/results_mean.tex}
+
 
 \begin{figure}[H]
     \centering
-    \caption{Ranking posiciones medias GWO y GWO+SA Dimensión 10}
-    % \includegraphics[width=0.9\textwidth]{Resultados/hibrido/Externo/D10/media_posicion.png}
+    \caption{Ranking posiciones medias GWO, GWO+SA y GWO (Mejora elitismo). Dimensión 10}
+    \includegraphics[width=0.9\textwidth]{Resultados/Analisis_final/D10/GWO/Grafico_puestos.png}
 
 \end{figure}
 
-Aunque a pesar de no mejorar ningún algoritmo de la comparativa, la nueva versión híbrida mejora el comportamiento respecto a su versión hibridada, lo cual tiene sentido, ya que aunque no encuentre el óptimo global, encontrará mejores óptimos locales
+La versión con mejoras teóricas (aplicación de operador de cruce) mejora los resultados pero no de una manera pronunciada, podría deberse a que, al generarse solo 4 hijos de los mejores lobos y ser la población mucho mayor (50) no tenga un efecto muy medible en el algoritmo.
 
-\subsubsection*{D30}
+Por otro lado al hibridarlo si que se consigue una mejora sustancial en la diferencia de resultados. Aunque el algoritmo de ES solo se aplica a los lobos lideres (en este caso 3), al ser estos los que dirigen la búsqueda, se consigue escapar de mínimos locales y acaban mejorando el rendimiento general del algorritmo con un pequeño incremento en los tiempos de ejecución
 
-A diferencia de la optimización en 10D, para 30D sí es capaz de mejorar metaheurísticas existentes. En este caso mejora a la archiconocida \textit{Particle Swarm Optimization}. Esto se puede deber a la propia
 
-A pesar de los intentos de mejorar los resultados. Se queda un algoritmo como imbatido, el MOS, el cual no llego a entender del todo como funciona y se queda pendiente estudiarlo a fondo.
+
+
+\subsubsection{Comparativa externa}
+
+\input{Resultados/Analisis_final/D10/Todos/results_100.tex}
+
+\input{Resultados/Analisis_final/D10/Todos/results_mean.tex}
+
 
 \begin{figure}[H]
     \centering
-    \caption{Ranking posiciones medias GWO y GWO+SA Dimensión 30}
-    % \includegraphics[width=0.9\textwidth]{Resultados/hibrido/Externo/D30/media_posicion.png}
-
+    \caption{Ranking posiciones medias GWO, GWO+SA y GWO(Mejora elitismo) vs PSO,DE y MOS. Dimensión 10}
+    \includegraphics[width=0.9\textwidth]{Resultados/Analisis_final/D10/Todos/Grafico_puestos.png}
 
 \end{figure}
 
-% \input{Resultados/hibrido/Externo/D30/results_100}
 
-% \input{Resultados/hibrido/Externo/D30/results_mean}
+En el gráfico del ranking se puede observar que, en general, este algoritmo y sus modificaciones no son mejores que otras técnicas para le resolución de los problemas del benchmark CEC2017.
+
+\subsection{D30}
+
+
+\subsubsection{Comparativa interna}
+
+
+\input{Resultados/Analisis_final/D30/GWO/results_100.tex}
+
+\input{Resultados/Analisis_final/D30/GWO/results_mean.tex}
+
+
+\begin{figure}[H]
+    \centering
+    \caption{Ranking posiciones medias GWO, GWO+SA y GWO (Mejora elitismo). Dimensión 10}
+    \includegraphics[width=0.9\textwidth]{Resultados/Analisis_final/D30/GWO/Grafico_puestos.png}
+    \label{img:aaaaaaaaaaaaaaaaaaaaaaa}
+
+\end{figure}
+
+
+En estas ejecuciones la version con la mejora teórica no aporta ninguna mejora, solo un incremento en los tiempos de ejecución que la verdad no dan pié a usar esta versión en dimensiones superiores. Sigue estando presente el razonamiento del apartado anterior sobree la cantidad de elementos de la población y a cuantos afecta el elitismo. Esto se puede observar en la imagen \ref{img:aaaaaaaaaaaaaaaaaaaaaaa} la cual, a pesar de estar dibujados la evolución de los 3 algoritmos, EL GWO y su versión híbrida dan siempre los mismos resultados
+
+
+\subsubsection{Comparativa externa}
+
+Tras los resultados del apartado anterior, la comparativa final será ver como responde la versión hibridada del GWO+SA contra el resto de algoritmos antes mencionados.
+
+\input{Resultados/Analisis_final/D30/Todos/results_100.tex}
+
+\input{Resultados/Analisis_final/D30/Todos/results_mean.tex}
+
+
+\begin{figure}[H]
+    \centering
+    \caption{Ranking posiciones medias GWO, GWO+SA y GWO(Mejora elitismo) vs PSO,DE y MOS. Dimensión 30}
+    \includegraphics[width=0.9\textwidth]{Resultados/Analisis_final/D30/Todos/Grafico_puestos.png}
+
+\end{figure}
+
+Con la propuesta de hibridación tampoco se mejora ningun algoritmo anteriormente descrito. hasta cierto punto la metaheurística del GWO no rinde a un nivel de competición en los problemas de la compatición CEC2017. Con algunas mejoras en la implementación intuyo que se podrían mejorar algo los resultados aunque no creo que nunca llegen a ser mejores que el algoritmo de \textit{DE}.
+
 
 
 \section{Aplicación al problema de las prácticas}
@@ -593,12 +631,8 @@ Para la ejecución del programa se ha pensado en pasar los parámetros siempre p
 Si el programa se ejecuta sin ningun flag, se ejecutará la versión básica del algoritmo 10 veces con semilla igual a la hora de la cpu en el momento de la ejecución.
 
 
-
-\section{Bibliografía}
-
-Principalmente, documentos de la universidad apoyados del siguiente libro:
-
-\url{https://www.google.com/search?q=The+algorithm+Design+Manual&oq=The+algorithm+Design+Manual&aqs=chrome..69i57.8716j0j1&sourceid=chrome&e=UTF-8#wptab=si:AMnBZoEG3b_8oGF0zZDE6xv96fMHXP7HJH_MnzBXKd6lQPgr0x9FAhJbzhl-mXQs09va7tgfS0tmq9BAixznV7von37XNewIw_Um1FQ6wfaQI4rwDvhX1e-GXS_G0MX7E6K2fWcdKuVs64FZpIqGagHPROC0mvbWvcSAQYL-QLu2yIPStw0Zslk%3D}
+\bibliographystyle{alpha}
+\bibliography{mybib}
 
 
 \end{document}
