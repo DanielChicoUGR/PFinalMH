@@ -1,1 +1,1 @@
-/usr/bin/clang++ CMakeFiles/gwo.dir/src/gwo_main.cc.o -o ../gwo  -Wl,-rpath,/home/daniel/Proyectos/p4mh/code/build libcec17_test_func.so libGWO_LIB.so libPARSER.so /usr/lib/llvm-14/lib/libomp.so /lib/x86_64-linux-gnu/libpthread.a libEXPLOITATION.so 
+/usr/bin/clang++ -g -rdynamic CMakeFiles/gwo.dir/src/gwo_main.cc.o -o /home/daniel/Proyectos/p4mh/code/gwo  -Wl,-rpath,/home/daniel/Proyectos/p4mh/code/build libcec17_test_func.so libGWO_LIB.so libPARSER.a -lomp -Wl,-Bstatic -lpthread libEXPLOITATION.a -Wl,-Bdynamic 

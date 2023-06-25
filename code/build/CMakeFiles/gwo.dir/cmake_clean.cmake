@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../gwo"
-  "../gwo.pdb"
+  "/home/daniel/Proyectos/p4mh/code/gwo"
+  "/home/daniel/Proyectos/p4mh/code/gwo.pdb"
   "CMakeFiles/gwo.dir/src/gwo_main.cc.o"
   "CMakeFiles/gwo.dir/src/gwo_main.cc.o.d"
 )

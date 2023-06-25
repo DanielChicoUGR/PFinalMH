@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0)
 PROJECT(cec17_Daniel_Chico_Valderas)
-cmake_minimum_required(VERSION 3.22)
+#cmake_minimum_required(VERSION 3.22)
 
 # set(CMAKE_CXX_COMPILER "clang++")
 # set(CMAKE_C_COMPILER "clang")
@@ -29,8 +29,8 @@ ADD_EXECUTABLE(gwo ${SRC}/gwo_main.cc)
 ADD_LIBRARY("cec17_test_func" SHARED ${SRC}/cec17_test_func.c ${SRC}/cec17.c )
 
 add_library(GWO_LIB SHARED ${SRC}/gwo_lib.cpp )
-add_library(EXPLOITATION SHARED ${SRC}/explotacion.cpp )
-add_library(PARSER  SHARED ${SRC}/program_parser.cpp)
+add_library(EXPLOITATION STATIC ${SRC}/explotacion.cpp )
+add_library(PARSER  STATIC ${SRC}/program_parser.cpp)
 
 target_link_libraries(GWO_LIB EXPLOITATION)
 TARGET_LINK_LIBRARIES(test "cec17_test_func")
