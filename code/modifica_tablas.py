@@ -59,3 +59,39 @@ def divide_tabla_latex(latex_input):
 # Ejemplo de uso
 latex_input = sys.argv[1]
 divide_tabla_latex(latex_input)
+
+# import pandas as pd
+# import sys
+
+# # leer la tabla
+# df = pd.read_table(sys.argv[1], index_col=0, skiprows=1)
+
+# # separar la tabla en dos
+# df1 = df.iloc[:, :7]
+# df2 = df.iloc[:, 7:]
+
+# # cambiar los nombres de las columnas de la primera tabla
+# df1.columns = ['1', '2', '3', '5', '10', '20', '30']
+
+# # cambiar los nombres de las columnas de la segunda tabla
+# df2.columns = ['40', '50', '60', '70', '80', '90', '100']
+
+# # escribir las tablas en formato LaTeX
+# with open(sys.argv[1], 'w') as f:
+#     f.write('\\begin{table}[H]\n')
+#     f.write('    \\caption{Media de ranking 10 Dimensiones}\n')
+#     f.write('    \\label{table:pos_med_10}\n')
+#     f.write('    \\begin{tabular}{lrrrrrrr}\n')
+#     f.write('        \\toprule\n')
+#     f.write('        {D10}  & 1        & 2        & 3        & 5        & 10       & 20       & 30       \\\\\\midrule\n')
+#     f.write(df1.to_latex(escape=False))
+#     f.write('        \\bottomrule\n')
+#     f.write('    \\end{tabular}\n')
+#     f.write('\n')
+#     f.write('    \\begin{tabular}{lrrrrrrr}\n')
+#     f.write('        \\toprule\n')
+#     f.write('        {D10}  & 40       & 50       & 60       & 70       & 80       & 90       & 100      \\\\\\midrule\n')
+#     f.write(df2.to_latex(escape=False))
+#     f.write('        \\bottomrule\n')
+#     f.write('    \\end{tabular}\n')
+#     f.write('\\end{table}\n')

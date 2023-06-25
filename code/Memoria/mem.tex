@@ -40,8 +40,8 @@
 \hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black}
 
 % Configuración de las tablas
-\setlength{\tabcolsep}{10pt}
-\renewcommand{\arraystretch}{1}
+\setlength{\tabcolsep}{11pt}
+\renewcommand{\arraystretch}{1.5}
 
 % Configuración de las leyendas de las figuras
 \captionsetup[figure]{font=footnotesize,labelfont=bf,skip=10pt}
@@ -229,7 +229,12 @@ Al ser una metaheurística poblacional basada en un modelo biológico empecé co
 Antes de entrar a valorar como de buena es la metaheurística del GWO, se ha de tener en cuenta que las metaheurísticas al ser basadas en comportamientos animales o fenómenos físicos no tienen por qué dar siempre el resultado correcto.
 Se intenta aproximar al mejor resultado explorado en el espacio de soluciones.     La calidad de las soluciones depende de si dicha mh se diseña/piensa para el tipo de problema. Las ejecuciones se han realizado con la semilla aleatoria 1.
 
-La calidad de los resultados de la metaheurística se comprobarán a priori con otras 3 metaheurísticas proporcionadas por la web \url{https://tacolab.org} y contra un algoritmo que solo genere soluciones aleatorias.     Esto último podría sonar a algo que no aporta información, pero gracias a los teoremas de \textit{No Free Lunch} no se puede descartar esta metaheurística (en referencia a la aleatoria). Tampoco sería un algoritmo a escoger para resolver un problema, pero sí que lo considero como una buena frontera, tanto en cuanto a superar en calidad de soluciones.
+Se usarán para las comparatorias 3 algos alritmos distintos dentro de los que ofrece la págigina \url{tacolab.org}. Los algoritmos selecionados seríán: \textit{DE}, \textit{MOS} y \textit{PSO}.
+\begin{itemize}
+    \item DE: Differential Evolution -> Algoritmo evolutivo bastante usado en la actualidad y bastante potente.
+    \item PSO: Particle Swarm Optimization -> Uno de los primeros modelos bioinspirados, eas también un algoritmo poblacional.
+    \item MOS: Multiple Offspring Optimization -> Modificación de los algoritmos genéticos con bastante capacidad de exploración(aparente).
+\end{itemize}
 
 
 
@@ -243,18 +248,24 @@ La calidad de los resultados de la metaheurística se comprobarán a priori con 
 \subsubsection*{100\% Ejecuciones}
 \input{Resultados/basico/d10/results_100.tex}
 
+
+
 \subsubsection*{Media Puestos}
+
+
 \input{Resultados/basico/d10/results_mean.tex}
 \begin{figure}[H]
 
-    \caption{Ranking GWO vs DW/GWO/MOS/PSO/RANDOM dimesion 10}
+    \caption{Ranking GWO vs DE/MOS/PSO Dimensión $\rightarrow$ 10}
 
     \includegraphics[width=1\textwidth]{Resultados/basico/d10/Grafico_puestos.png} \label{img:ranking-D10}
 \end{figure}
 
-Aquí se puede ver la media de puestos para 10D. Siendo la cota a superar a priori él random, podemos observar que lo supera pero no por mucho. Menos al inicio de las iteraciones (donde el componente aleatorio tiene más predominancia) que obtiene mejores resultados. Fijándonos también en la tabla \ref{table:1_ejecD10}.
+Se puede observar que para Dimensión 10, el GWO reporta peores soluciones que otras opciones mas conocidas como el PSO y el DE. Como contrincante a batir en el mejor de los casos se impone el algoritmo MOS, que genera las mejores soluciones de los algoritmos elegidos para comparar. Se puede observar que, para este tipo de problemas en D10, \textit{Diferential evolution} y \textit{Multiple Offpring sample} dan resultados relativamente cercanos entre si y en la comparativa por ahora, los mejores. Para analisis de esta dimensión no se hablará de estos dos algoritmo a no ser que se den mejores resultados. El algoritmo a batir para D10 es el \textit{Partivle Swarm Optimization (PSO)}.
 
-En la imagen \ref*{img:ranking-D10} Se puede ver como para D10, esta metaheurística no hace un mejor trabajo que otras técnicas más usadas y conocidas. Es más, para este tipo de funciones, cuando el número de iteraciones se acerca al límite no genera una mejor solución que el algoritmo Random, lo cual deja mucho que desear si se quiere usar esta metaheurística para optimizar una función similar.
+A tener en cuenta que no siempre da resultados peores que los otros algoritmos. Para la función F04 de la tabla \ref{table:100_ejecD10} se observa como da mejores soluciones que los ''mejores'' algoritmos de la práctica aunque no es generalizado, para el 100\% de las iteraciones no consigue dar nunca la mejor solución de entere los algoritmos a comparar.
+
+
 
 
 \subsection{D30}
@@ -271,11 +282,13 @@ En la imagen \ref*{img:ranking-D10} Se puede ver como para D10, esta metaheurís
 \subsubsection*{Media Puestos}
 \input{Resultados/basico/d30/results_mean.tex}
 \begin{figure}[H]
-    \caption{Ranking GWO vs DW/GWO/MOS/PSO/RANDOM}
+    \caption{Ranking GWO vs DE/MOS/PSO Dimensión $\rightarrow$ 30}
     \centering
     \includegraphics[width=0.8\textwidth]{Resultados/basico/d30/Grafico_puestos.png} \label{img:ranking_D30}
 \end{figure}
-Nuevamente, se observa como el algoritmo directamente no es capaz de combatir contra otras metaheurísticas en estos problemas. Por lo que tengo entendido y tras hablar con Daniel (profesor de prácticas), Esta mh se diseñó y testeó con funciones cuyo mínimo se encuentra en el centro del espacio de solución o muy cerca. A tener en cuenta que a diferencia de rendimiento en PSO entre los dos tipos de problemas. Que puede ser debido a los propios operadores del algoritmo que sesguen el espacio de búsqueda.
+
+
+
 
 
 
@@ -350,14 +363,14 @@ Para decidir que versión comparar con el resto de algoritmos vamos a comparar l
 \end{figure}
 
 
-
-
 \input{Resultados/hibrido/Interno/D30/results_mean.tex}
 
 
 
 \subsubsection*{Análisis y toma de decisiones}
 Ambas versiones proporcionan unos mejores resultados. Siendo la versión de enfriamiento simulado la que gana por poco. Por los resultados de las prácticas tenía cierta noción de qué enfriamiento simulado funciona mejor. Ahora con estos resultados, y después de probarlos en dos tipos de problemas, puedo confirmarlo. La probabilidad de aceptar peores soluciones hace que se estanque en menos mínimos locales y acabe acercándose más a los mínimos globales. También queda claro que, aunque el algoritmo base del GWO tiene mecanismos para explotar el entorno, siempre viene bien utilizar metaheurísticas pensadas para ese objetivo, ya que tenderán a mejorar más los resultados.
+
+Parte de la mejora potencial puede venir de la actualización en la versión hibrida de los lobos $X_\alpha,X_\beta,X_\delta$, que sufren una actualización de sus valores por la ejecución del algoritmo de explotación sobre la solución que almacenaban estos lobos. En la versión original, los lobos $X_\alpha,X_\beta,X_\delta$ no se actualizan a no ser que pierdan su status y pasen a se $X_\omega$s.
 
 Para el análisis con el resto de algoritmos usaré a partir de ahora el algoritmo hibridado con la búsqueda local. Esta será la versión que se ejecute por defecto en el ejecutable cuando se escoja la versión hibridada. Para más información al respecto acuda a la sección \ref{subsec:set-up}
 
@@ -432,7 +445,7 @@ El pseudocdigo del algoritmo de reprodución sería:
 \end{algorithm}
 
 \begin{algorithm}[H]
-    \caption{Operador de Cruce BLX}
+    \caption{OperParticle Swador de Cruce BLX}
     \begin{algorithmic}[1]
         \Function{BLX}{$padre1, padre2, min, max$}
         \State $hijo1 \gets padre1->sol$
@@ -459,15 +472,17 @@ El pseudocdigo del algoritmo de reprodución sería:
 
 \section{Análisis del rendimiento con Mejoras}
 
-\subsubsection*{D10}
-\input{Resultados/hibrido/Externo/D10/results_100}
+Enn este apartado compararemos la versión básica del algoritmo, la versión con el operador de reproducción extra y una hibridación de la versión básica del algoritmo. Se compararán con los algoritmos ya usados anteriormente para compara. EL \textit{PSO},\textit{DE} y \textit{MOS}.
 
-\input{Resultados/hibrido/Externo/D10/results_mean}
+\subsubsection*{D10}
+% \input{Resultados/hibrido/Externo/D10/results_100}
+
+% \input{Resultados/hibrido/Externo/D10/results_mean}
 
 \begin{figure}[H]
     \centering
     \caption{Ranking posiciones medias GWO y GWO+SA Dimensión 10}
-    \includegraphics[width=0.9\textwidth]{Resultados/hibrido/Externo/D10/media_posicion.png}
+    % \includegraphics[width=0.9\textwidth]{Resultados/hibrido/Externo/D10/media_posicion.png}
 
 \end{figure}
 
@@ -482,14 +497,14 @@ A pesar de los intentos de mejorar los resultados. Se queda un algoritmo como im
 \begin{figure}[H]
     \centering
     \caption{Ranking posiciones medias GWO y GWO+SA Dimensión 30}
-    \includegraphics[width=0.9\textwidth]{Resultados/hibrido/Externo/D30/media_posicion.png}
+    % \includegraphics[width=0.9\textwidth]{Resultados/hibrido/Externo/D30/media_posicion.png}
 
 
 \end{figure}
 
-\input{Resultados/hibrido/Externo/D30/results_100}
+% \input{Resultados/hibrido/Externo/D30/results_100}
 
-\input{Resultados/hibrido/Externo/D30/results_mean}
+% \input{Resultados/hibrido/Externo/D30/results_mean}
 
 
 \section{Aplicación al problema de las prácticas}

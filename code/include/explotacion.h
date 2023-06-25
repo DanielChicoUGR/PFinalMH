@@ -9,16 +9,16 @@
 #include <functional>
 #include <vector>
 
-std::vector<double>
+std::pair<std::vector<double>, double>
 busqueda_local(const std::function<double(double *)> &fitness_func,
                const double &min, const double &max,
                const std::vector<double> &sol_ini, int MAX_ITERS = 200,
                double mean = 0.0, double std = std::sqrt(0.3));
 
-std::vector<double>
+std::pair<std::vector<double>, double>
 Enfriamiento_simulado(const std::function<double(double *)> &fitness_func,
                       const double &min, const double &max,
                       const std::vector<double> &sol_ini, int MAX_ITERS = 200,
                       double mean = 0.0, double std = 1);
 
-#endif // CEC17_DANIEL_CHICO_VALDERAS_EXPLOTACION_H
+#endif// CEC17_DANIEL_CHICO_VALDERAS_EXPLOTACION_H
