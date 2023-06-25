@@ -1,1 +1,1 @@
-/usr/bin/clang++ -fPIC -g -shared -Wl,-soname,libGWO_LIB.so -o libGWO_LIB.so CMakeFiles/GWO_LIB.dir/src/gwo_lib.cpp.o  libEXPLOITATION.a 
+/usr/bin/clang++ -fPIC -O3 -DNDEBUG -shared -Wl,-soname,libGWO_LIB.so -o libGWO_LIB.so CMakeFiles/GWO_LIB.dir/src/gwo_lib.cpp.o  libEXPLOITATION.a 

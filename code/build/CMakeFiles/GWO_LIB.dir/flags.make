@@ -6,5 +6,5 @@ CXX_DEFINES = -DGWO_LIB_EXPORTS
 
 CXX_INCLUDES = -I/home/daniel/Proyectos/p4mh/code/include
 
-CXX_FLAGS = -g -fPIC -fcolor-diagnostics -std=gnu++2b
+CXX_FLAGS = -O3 -DNDEBUG -fPIC -fcolor-diagnostics -std=gnu++2b
 

@@ -6,5 +6,5 @@ C_DEFINES = -Dcec17_test_func_EXPORTS
 
 C_INCLUDES = -I/home/daniel/Proyectos/p4mh/code/include
 
-C_FLAGS = -g -fPIC -fcolor-diagnostics
+C_FLAGS = -O3 -DNDEBUG -fPIC -fcolor-diagnostics
 

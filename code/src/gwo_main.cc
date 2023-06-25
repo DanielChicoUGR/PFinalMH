@@ -31,7 +31,7 @@ int main(int argc, char **argv) {
   args.addArgument({"-d", "--dim"}, &dim,
                    "Dimensión del problema (por defecto se ejecuta la versión "
                    "mas simple (10) y los valores validos son {10,30,50}");
-  args.addArgument({"-c", "--concurrent"}, &concurrent, "Concurrent");
+//  args.addArgument({"-c", "--concurrent"}, &concurrent, "Concurrent");
   args.addArgument({"-s", "--seed"}, &seed,
                    "Semilla generadora de N_aleatorios");
   args.addArgument({"-v", "--veces"}, &veces,
@@ -96,7 +96,7 @@ int main(int argc, char **argv) {
             cec17_init(carpeta.c_str(), funcid, dim);
             switch (algoritmo) {
                 case 1:
-                    sol = gwo_hibrido(cec17_fitness, -100.0, 100.0, dim, 10000 * dim, es);
+                    sol = gwo_hibrido(cec17_fitness, -100.0, 100.0, dim, 10000 * dim, !bl);
                     break;
                 case 0:
                     sol = gwo(cec17_fitness, -100.0, 100.0, dim, 10000 * dim);

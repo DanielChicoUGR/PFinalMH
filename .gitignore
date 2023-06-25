@@ -5,5 +5,7 @@
 
 build/
 
-code/build/
+code/build/*
 results_*
+.cache/*s
+
