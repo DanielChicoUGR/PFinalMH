@@ -533,7 +533,7 @@ El proyecto se ha estructurado de la siguiente manera:
     .2 extract\_all.py \DTcomment{Archivo de ejecución de extract.py}.
     .2 extract.py \DTcomment{Genera una hoja de calculo con los archivos de resultado}.
     .2 genera\_medias.py \DTcomment{Genera la media de las distintas ejecuciones en una hoja de calculo para su posterior analisis}.
-    .2 Modifica\_tablas.py \DTcomment{Modifica las tablas en latex de \url{tacolab.org} para que estén bien formateadas}.
+    .2 Modifica\_tablas.py \DTcomment{Modifica las tablas en latex de \url{tacolab.org} para que estén bien formateadas(necesitan arreglo todavia)}.
     .2 Memoria.pdf.
 }
 
@@ -582,13 +582,23 @@ El programa se ha escrito pensando en ejecutarse en Linux, si se tiene un sistem
 
 Para la ejecución del programa se ha pensado en pasar los parámetros siempre por línea de comandos. El programa permite configurar que ejecutar y como de la siguiente manera:
 
-%TODO: Terminar de explicar como ejecutar el proyecto
+\begin{figure}[H]
+    \centering
+    \caption{Flags permitidas por el ejecutable}
+    \includegraphics[width=\textwidth]{dash_help_program.png}
+
+
+\end{figure}
+
+Si el programa se ejecuta sin ningun flag, se ejecutará la versión básica del algoritmo 10 veces con semilla igual a la hora de la cpu en el momento de la ejecución.
+
+
 
 \section{Bibliografía}
 
 Principalmente, documentos de la universidad apoyados del siguiente libro:
 
-\url{https://www.google.com/search?q=The+algorithm+Design+Manual&oq=The+algorithm+Design+Manual&aqs=chrome..69i57.8716j0j1&sourceid=chrome&ie=UTF-8#wptab=si:AMnBZoEG3b_8oGF0zZDE6xv96fMHXP7HJH_MnzBXKd6lQPgr0x9FAhJbzhl-mXQs09va7tgfS0tmq9BAixznV7von37XNewIw_Um1FQ6wfaQI4rwDvhX1e-GXS_G0MX7E6K2fWcdKuVs64FZpIqGagHPROC0mvbWvcSAQYL-QLu2yIPStw0Zslk%3D}
+\url{https://www.google.com/search?q=The+algorithm+Design+Manual&oq=The+algorithm+Design+Manual&aqs=chrome..69i57.8716j0j1&sourceid=chrome&e=UTF-8#wptab=si:AMnBZoEG3b_8oGF0zZDE6xv96fMHXP7HJH_MnzBXKd6lQPgr0x9FAhJbzhl-mXQs09va7tgfS0tmq9BAixznV7von37XNewIw_Um1FQ6wfaQI4rwDvhX1e-GXS_G0MX7E6K2fWcdKuVs64FZpIqGagHPROC0mvbWvcSAQYL-QLu2yIPStw0Zslk%3D}
 
 
 \end{document}
