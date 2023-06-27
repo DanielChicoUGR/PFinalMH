@@ -102,7 +102,7 @@ std::vector<double> gwo(const std::function<double(double *)> &fitnes,
         actualiza_lobos(dim, agentes, alpha, beta, delta, a, AUpdate);
 
         // Actualizamos fitnes de la nueva posición de los lobos
-        std::for_each(agentes.begin(), agentes.end(), update_fitnes);
+        std::for_each(std::next(agentes.begin(), 3), agentes.end(), update_fitnes);
 
         // Los ordenamos en función de su fitnes para obtener la cuspide de la
         // gerarquia
@@ -160,7 +160,7 @@ std::vector<double> gwo_hibrido(const std::function<double(double *)> &fitnes,
             actualiza_lobos(dim, agentes, alpha, beta, delta, a, AUpdate);
 
             // Actualizamos fitnes de la nueva posición de los lobos
-            std::for_each(agentes.begin(), agentes.end(), update_fitnes);
+            std::for_each(std::next(agentes.begin(), 3), agentes.end(), update_fitnes);
 
             // Los ordenamos en función de su fitnes para obtener la cuspide de la
             // gerarquia
@@ -309,7 +309,7 @@ std::vector<double> gwo_mejorado(const std::function<double(double *)> &fitnes,
         actualiza_lobos(dim, agentes, alpha, beta, delta, a, AUpdate);
 
         // Actualizamos fitnes de la nueva posición de los lobos
-        std::for_each(agentes.begin(), agentes.end(), update_fitnes);
+        std::for_each(std::next(agentes.begin(), 3), agentes.end(), update_fitnes);
 
         // Los ordenamos en función de su fitnes para obtener la cuspide de la
         // gerarquia

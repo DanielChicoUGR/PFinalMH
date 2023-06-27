@@ -151,14 +151,14 @@ Aunque el proceso de caza es guiado por $\alpha,\beta$ y $\delta$, en un problem
     \item $X(t+1)=\frac{X_1+X_2+X_3}{3}$
 \end{itemize}
 
-El formalismo matemático puede ser encontrado con mas riqueza en el articulo original de la metaheuristica  \cite{MIRJALILI201446}
+El formalismo matemático puede ser encontrado con más riqueza en el artículo original de la metaheurística  \cite{MIRJALILI201446}
 
 \subsubsection{Características de la Metaheurística}
 
 Es una metaheurística de carácter poblacional, en el que cada lobo es representado como una solución concreta. El tamaño de la muestra, se recomienda que sea de entre 5 y 12 individuos con el objetivo de intentar simular al máximo las manadas de lobos grises salvajes (cuyo número de integrantes oscila entre esos valores en libertad). Tras varias pruebas he determinado que el tamaño de población que mejor se ajusta al problema es 10, aunque dejo como duda que pasaría si la manda fuera más grande (llegando a 50 individuos, como por ejemplo la práctica 2 donde implementamos técnicas poblacionales con ese número de soluciones para explorar).
 
 
-El carácter estocástico que tiene esta ''mh'' viene dado por la aparición de dos vectores de valores aleatorios que intervienen en el valor de $\vec{A}$ y $\vec{C}$. Para controlar cuando el algoritmo explora y cuando explota el vecindario, se tiene un parámetro A que va linealmente de $2 \rightarrow 0$ linealmente a lo largo de las iteraciones. Cuando este parámetro es mayor que 1, el agente se desplaza una mayor distancia en la dirección de la presa, ''Saltándosela'' pero explorando otros entornos que pueden dar mejoras soluciones. Cuando este parámetro es menor a 1 estas actualizaciones desplazan la solución una menor distancia, consiguiendo explotar el entorno definido por los $\alpha,\beta,\delta$. Para el parametro $\vec{C}$, Si $|\vec{C}|$>1, el agente se desplaza en dirección contraria a la presa (en nuestro caso solución ) Con el objetivo de explorar la solución. Este último parametro, al contrario del pararmetro A que depende de a y que va linealmente de 2 a 0, es n parametro puramente estocástico que hace que explore de una manera bastánte eficiente (y que sin este parámetro los agentes describirían trayectorias rectilineas en el espacio N-dimensional hacia el supuesto minimo global).
+El carácter estocástico que tiene esta ''mh'' viene dado por la aparición de dos vectores de valores aleatorios que intervienen en el valor de $\vec{A}$ y $\vec{C}$. Para controlar cuando el algoritmo explora y cuando explota el vecindario, se tiene un parámetro A que va linealmente de $2 \rightarrow 0$ linealmente a lo largo de las iteraciones. Cuando este parámetro es mayor que 1, el agente se desplaza una mayor distancia en la dirección de la presa, ''Saltándosela'' pero explorando otros entornos que pueden dar mejoras soluciones. Cuando este parámetro es menor a 1 estas actualizaciones desplazan la solución una menor distancia, consiguiendo explotar el entorno definido por los $\alpha,\beta,\delta$. Para el parámetro $\vec{C}$, Si $|\vec{C}|$>1, el agente se desplaza en dirección contraria a la presa (en nuestro caso solución ) Con el objetivo de explorar la solución. Este último parámetro, al contrario del parámetro A que depende de a y que va linealmente de 2 a 0, es n parámetro puramente estocástico que hace que explore de una manera bastante eficiente (y que sin este parámetro los agentes describirían trayectorias rectilíneas en el espacio N-dimensional hacia el supuesto mínimo global).
 
 
 \subsubsection*{Pseudocódigo}
@@ -218,8 +218,8 @@ El carácter estocástico que tiene esta ''mh'' viene dado por la aparición de 
 \end{algorithm}
 
 
-\subsubsection*{Otros Parametros}
-Al ser una metaheurística poblacional basada en un modelo biológico empecé con una población inical de entre 5 y 12 (el rango de individuos de las manadas de lobos en libertad), aunque tras leer varios articulos y posts en blogs especializados decidí aumentar la cantidad de poblaciones en la solución a 50. Una cantidad de soluciones usada anteriormente en las prácticas para la programación de algoritmos genéticos. Por lo tanto los benchmarks realizados y expuestos en esta práctica son con una población de 50. Si se quisiera ejecutar con otra cantidad de soluciones, se debería modificar el tamaño de la población en una \textit{macro de compilación} en el archivo textit{./include/gwo\_lib.h}. El numero de ejecuciones máximas de la función fitnes viene dado por la expresión $10000 \times dim$ donde $dim$ es la dimensión del espacio de soluciones.
+\subsubsection*{Otros Parámetros}
+Al ser una metaheurística poblacional basada en un modelo biológico empecé con una población inicial de entre 5 y 12 (el rango de individuos de las manadas de lobos en libertad), aunque tras leer varios artículos y posts en blogs especializados decidí aumentar la cantidad de poblaciones en la solución a 50. Una cantidad de soluciones usada anteriormente en las prácticas para la programación de algoritmos genéticos. Por lo tanto, los benchmarks realizados y expuestos en esta práctica son con una población de 50. Si se quisiera ejecutar con otra cantidad de soluciones, se debería modificar el tamaño de la población en una \textit{macro de compilación} en el archivo textit{./include/gwo\_lib.h}. El numero de ejecuciones máximas de la función fitnes viene dado por la expresión $10000 \times dim$ donde $dim$ es la dimensión del espacio de soluciones.
 
 
 
@@ -229,13 +229,13 @@ Al ser una metaheurística poblacional basada en un modelo biológico empecé co
 \section{Análisis de Rendimientos}
 
 Antes de entrar a valorar como de buena es la metaheurística del GWO, se ha de tener en cuenta que las metaheurísticas al ser basadas en comportamientos animales o fenómenos físicos no tienen por qué dar siempre el resultado correcto.
-Se intenta aproximar al mejor resultado explorado en el espacio de soluciones.     La calidad de las soluciones depende de si dicha mh se diseña/piensa para el tipo de problema. Las ejecuciones se han realizado con la semilla aleatoria 1.
+Se intenta aproximar al mejor resultado explorado en el espacio de soluciones. La calidad de las soluciones depende de si dicha mh se diseña/piensa para el tipo de problema. Las ejecuciones se han realizado con la semilla aleatoria 1.
 
-Se usarán para las comparatorias 3 algos alritmos distintos dentro de los que ofrece la págigina \url{tacolab.org}. Los algoritmos selecionados seríán: \textit{DE}, \textit{MOS} y \textit{PSO}.
+Se usarán para las comparatoria 3 algoritmos distintos dentro de los que ofrece la página \url{tacolab.org}. Los algoritmos seleccionados serán: \textit{DE}, \textit{MOS} y \textit{PSO}.
 \begin{itemize}
-    \item DE: Differential Evolution -> Algoritmo evolutivo bastante usado en la actualidad y bastante potente.
-    \item PSO: Particle Swarm Optimization -> Uno de los primeros modelos bioinspirados, eas también un algoritmo poblacional.
-    \item MOS: Multiple Offspring Optimization -> Modificación de los algoritmos genéticos con bastante capacidad de exploración(aparente).
+    \item DE: Differential Evolution $\rightarrow$ Algoritmo evolutivo bastante usado en la actualidad y bastante potente.
+    \item PSO: Particle Swarm Optimization $\rightarrow$ Uno de los primeros modelos bioinspirados, es también un algoritmo poblacional.
+    \item MOS: Multiple Offspring Optimization $\rightarrow$ Modificación de los algoritmos genéticos con bastante capacidad de exploración(aparente).
 \end{itemize}
 
 
@@ -263,9 +263,9 @@ Se usarán para las comparatorias 3 algos alritmos distintos dentro de los que o
     \includegraphics[width=1\textwidth]{Resultados/basico/d10/Grafico_puestos.png} \label{img:ranking-D10}
 \end{figure}
 
-Se puede observar que para Dimensión 10, el GWO reporta peores soluciones que otras opciones mas conocidas como el PSO y el DE. Como contrincante a batir en el mejor de los casos se impone el algoritmo MOS, que genera las mejores soluciones de los algoritmos elegidos para comparar. Se puede observar que, para este tipo de problemas en D10, \textit{Diferential evolution} y \textit{Multiple Offpring sample} dan resultados relativamente cercanos entre si y en la comparativa por ahora, los mejores. Para analisis de esta dimensión no se hablará de estos dos algoritmo a no ser que se den mejores resultados. El algoritmo a batir para D10 es el \textit{Partivle Swarm Optimization (PSO)}.
+Se puede observar que para Dimensión 10, el GWO reporta peores soluciones que otras opciones más conocidas como el PSO y el DE. Como contrincante a batir en el mejor de los casos se impone el algoritmo MOS, que genera las mejores soluciones de los algoritmos elegidos para comparar. Se puede observar que, para este tipo de problemas, en D10, \textit{Diferential evolution} y \textit{Multiple Offpring sample} dan resultados relativamente cercanos entre sí y en la comparativa, por ahora, los mejores. Para análisis de esta dimensión no se hablará de estos dos algoritmos a no ser que se den mejores resultados. El algoritmo a batir para D10 es el \textit{Particle Swarm Optimization (PSO)}.
 
-A tener en cuenta que no siempre da resultados peores que los otros algoritmos. Para la función F04 de la tabla \ref{table:100_ejecD10} se observa como da mejores soluciones que los ''mejores'' algoritmos de la práctica aunque no es generalizado, para el 100\% de las iteraciones no consigue dar nunca la mejor solución de entere los algoritmos a comparar.
+A tener en cuenta que no siempre da resultados peores que los otros algoritmos. Para la función F04 de la tabla \ref{table:100_ejecD10} se observa como da mejores soluciones que los ''mejores'' algoritmos de la práctica, aunque no es generalizado, para el 100\% de las iteraciones no consigue dar nunca la mejor solución de entre los algoritmos a comparar.
 
 
 
@@ -296,13 +296,13 @@ A tener en cuenta que no siempre da resultados peores que los otros algoritmos. 
 
 \section{Hibridación }
 
-Para hibridar el algoritmo de GWO he probado dos versiones. La primera sería una búsqueda local con las características indicadas en el guion de la práctica 1 para el problema del APC. Y la segunda correspondería al algoritmo de Enfriamiento simulado, el cuál usa el esquema de enfriamiento de Cauchí modificado explicado en la práctica 3 de la asignatura, se mantienen otras características indicadas en los guiones en los algoritmos implementados.
+Para hibridar el algoritmo de GWO he probado dos versiones. La primera sería una búsqueda local con las características indicadas en el guion de la práctica 1 para el problema del APC. Y la segunda correspondería al algoritmo de Enfriamiento simulado, el cual usa el esquema de enfriamiento de Cauchí modificado explicado en la práctica 3 de la asignatura, se mantienen otras características indicadas en los guiones en los algoritmos implementados.
 
 
 
 \subsection{Proceso de Hibridación}
 
-Tanto para el modelo híbrido con enfriamiento simulado como para el de búsqueda local se dan como máximo 200 evaluaciones por ejecución del algoritmo. Estos se ejecutan cada 20 iteraciones sobre los lobos $X_\alpha,X_\beta,X_\delta$ después de calcular los desplazamientos y los nuevos fittnes.
+Tanto para el modelo híbrido con enfriamiento simulado como para el de búsqueda local se dan como máximo 200 evaluaciones por ejecución del algoritmo. Estos se ejecutan cada 20 iteraciones sobre los lobos $X_\alpha,X_\beta,X_\delta$ después de calcular los desplazamientos y los nuevos fitnes.
 
 Para decidir que versión comparar con el resto de algoritmos vamos a comparar la versión sin hibridar con las otras dos y compararemos la versión hibrida que mejor resultados dé en comparación con su contrincante.
 
@@ -357,9 +357,9 @@ Para decidir que versión comparar con el resto de algoritmos vamos a comparar l
 \subsubsection*{Análisis y toma de decisiones}
 Ambas versiones proporcionan unos mejores resultados. Siendo la versión de enfriamiento simulado la que gana por poco. Por los resultados de las prácticas tenía cierta noción de qué enfriamiento simulado funciona mejor. Ahora con estos resultados, y después de probarlos en dos tipos de problemas, puedo confirmarlo. La probabilidad de aceptar peores soluciones hace que se estanque en menos mínimos locales y acabe acercándose más a los mínimos globales. También queda claro que, aunque el algoritmo base del GWO tiene mecanismos para explotar el entorno, siempre viene bien utilizar metaheurísticas pensadas para ese objetivo, ya que tenderán a mejorar más los resultados.
 
-Parte de la mejora potencial puede venir de la actualización en la versión hibrida de los lobos $X_\alpha,X_\beta,X_\delta$, que sufren una actualización de sus valores por la ejecución del algoritmo de explotación sobre la solución que almacenaban estos lobos. En la versión original, los lobos $X_\alpha,X_\beta,X_\delta$ no se actualizan a no ser que pierdan su status y pasen a se $X_\omega$s.
+Parte de la mejora potencial puede venir de la actualización en la versión híbrida de los lobos $X_\alpha,X_\beta,X_\delta$, que sufren una actualización de sus valores por la ejecución del algoritmo de explotación sobre la solución que almacenaban estos lobos. En la versión original, los lobos $X_\alpha,X_\beta,X_\delta$ no se actualizan a no ser que pierdan su status y pasen a ser $X_\omega$s.
 
-Para el análisis con el resto de algoritmos usaré a partir de ahora el algoritmo hibridado con la búsqueda local. Esta será la versión que se ejecute por defecto en el ejecutable cuando se escoja la versión hibridada. Para más información al respecto acuda a la sección \ref{subsec:set-up}
+Para el análisis con el resto de algoritmos usaré a partir de ahora el algoritmo hibridado con la búsqueda local. Esta será la versión que se ejecute por defecto en el ejecutable cuando se escoja la versión hibridada. Para más información al respecto, acuda a la sección \ref{subsec:set-up}
 
 
 
@@ -367,11 +367,10 @@ Para el análisis con el resto de algoritmos usaré a partir de ahora el algorit
 Al ser una metaheurística poblacional, además basada en comportamientos animales, podemos incluir nuevos operadores que muten los agentes de exploración. Por ejemplo, se podría implementar la reproducción como un sistema elitista en la que la peor solución de la población se reemplaza por una combinación de las mejores soluciones ($X_\alpha$/$X_\beta$/$X_\delta$). Esta mejora en concreto se ha implementado en una versión propia dentro de los ejecutables.
 
 
-Otra posible mejora sería la inclusión de nuevos estratos sociales que aportan de manera ponderada al desplazamiento (esto supondría un aumento en el número de agentes que conforman la población)
 
 \subsection{Pseudocódigo de la mejora}
 
-A nivel del código del algoritmo básico se mantendría basicamente con la misma estructura:
+A nivel del código del algoritmo básico se mantendría básicamente con la misma estructura:
 
 \begin{algorithm}[H]
     \caption{Grey Wolf Optimization Elitista}\label{alg:GWO_mejorado}
@@ -405,9 +404,9 @@ A nivel del código del algoritmo básico se mantendría basicamente con la mism
 \end{algorithm}
 
 
-El algoritmo reproduce se encarga de generar 4 hihjos, 2 del la pareja de lobos (soluciones) $X_\alpha$ y $X_\beta$ y 2 de la pareja de lobos (soluciones) $X_\alpha$ y $X_\delta$. Aplicando para la generación de los hijos el algoritmo de cruce BLX explicado en la práctica número 2 de la asignatura debido a que este operador de cruce fué el que mejores resutlados dió a la persona que me explicó como implementar el algoritmo de cruce (yo realicé el problema del QAP para las prácticas y el operador de cruce lo he pedido prestado).
+El algoritmo reproduce se encarga de generar 4 hijos, 2 de la pareja de lobos (soluciones) $X_\alpha$ y $X_\beta$ y 2 de la pareja de lobos (soluciones) $X_\alpha$ y $X_\delta$. Aplicando para la generación de los hijos el algoritmo de cruce BLX explicado en la práctica número 2 de la asignatura debido a que este operador de cruce fue el que mejores resultados dio a la persona que me explicó como implementar el algoritmo de cruce (yo realicé el problema del QAP para las prácticas y el operador de cruce lo he pedido prestado).
 
-El pseudocdigo del algoritmo de reprodución sería:
+El pseudocódigo del algoritmo de reproducción sería:
 \begin{algorithm}[H]
     \caption{Algoritmo encargado de la reproducción de la población}
     \begin{algorithmic}[1]
@@ -419,12 +418,12 @@ El pseudocdigo del algoritmo de reprodución sería:
         \State $l2.fitness \gets fitnes(\&l2.sol[0])$
         \State $l3.fitness \gets fitnes(\&l3.sol[0])$
         \State $l4.fitness \gets fitnes(\&l4.sol[0])$
-        \State $tam \gets$ tamanho de $poblacion$
+        \State $tam \gets$ Tamaño de $poblacion$
         \State $poblacion[tam - 1] \gets l1$
         \State $poblacion[tam - 2] \gets l2$
         \State $poblacion[tam - 3] \gets l3$
         \State $poblacion[tam - 4] \gets l4$
-        \State Ordenar $poblacion$ por ordem crescente de fitness
+        \State Ordenar $poblacion$ por orden ascendente de fitness
         \EndFunction
     \end{algorithmic}
 
@@ -432,7 +431,7 @@ El pseudocdigo del algoritmo de reprodución sería:
 \end{algorithm}
 
 \begin{algorithm}[H]
-    \caption{OperParticle Swador de Cruce BLX}
+    \caption{Operador de Cruce BLX}
     \begin{algorithmic}[1]
         \Function{BLX}{$padre1, padre2, min, max$}
         \State $hijo1 \gets padre1->sol$
@@ -456,10 +455,17 @@ El pseudocdigo del algoritmo de reprodución sería:
 \end{algorithm}
 
 
+\subsection{Otras mejoras teóricas}
+
+Otra posible mejora sería la inclusión de nuevos estratos sociales que aportan de manera ponderada al desplazamiento (esto supondría un aumento en el número de agentes que conforman la población). Podría ser por ejemplo 1 alpha, dos beta y tres gamma, cada uno genera un desplazammiento para los omegas, el desplazamiento total será la media de los 3 desplazamientos medios de los lobos con mejores soluciones.
+
+Otra posible mejora sería el control del parametro ''a'' que en el algoritmo básico va de 2 a 0 de manera lineal pero podría tener otros comportamientos (evolución logaritmica u similar). Con este enfoque he encontrado esta implementación en github que propone 2 maneras distintas de calcular ''a'' a parte de la propuesta por el creador de la metaheurística. \url{https://github.com/czeslavo/gwo/tree/master}
+
+
 
 \section{Análisis del rendimiento con Mejoras}
 
-En este apartado compararemos la versión básica del algoritmo, la versión con el operador de reproducción extra y una hibridación de la versión básica del algoritmo. Se compararán con los algoritmos ya usados anteriormente para compara. EL \textit{PSO},\textit{DE} y \textit{MOS}. Primero se comparán las distintas versiones del algoritmo entre si y luego se compararán con los algoritmos anteriormente indicados.
+En este apartado compararemos la versión básica del algoritmo, la versión con el operador de reproducción extra y una hibridación de la versión básica del algoritmo. Se compararán con los algoritmos ya usados anteriormente para comparar. EL \textit{PSO},\textit{DE} y \textit{MOS}. Primero se comparan las distintas versiones del algoritmo entre sí y luego se compararán con los algoritmos anteriormente indicados.
 
 \subsection{D10}
 
@@ -478,9 +484,9 @@ En este apartado compararemos la versión básica del algoritmo, la versión con
 
 \end{figure}
 
-La versión con mejoras teóricas (aplicación de operador de cruce) mejora los resultados pero no de una manera pronunciada, podría deberse a que, al generarse solo 4 hijos de los mejores lobos y ser la población mucho mayor (50) no tenga un efecto muy medible en el algoritmo.
+La versión con mejoras teóricas (aplicación de operador de cruce) mejora los resultados, pero no de una manera pronunciada, podría deberse a que, al generarse solo 4 hijos de los mejores lobos y ser la población mucho mayor (50) no tenga un efecto muy medible en el algoritmo.
 
-Por otro lado al hibridarlo si que se consigue una mejora sustancial en la diferencia de resultados. Aunque el algoritmo de ES solo se aplica a los lobos lideres (en este caso 3), al ser estos los que dirigen la búsqueda, se consigue escapar de mínimos locales y acaban mejorando el rendimiento general del algorritmo con un pequeño incremento en los tiempos de ejecución
+Por otro lado, al hibridarlo sí que se consigue una mejora sustancial en la diferencia de resultados. Aunque el algoritmo de ES solo se aplica a los lobos líderes (en este caso 3), al ser estos los que dirigen la búsqueda, se consigue escapar de mínimos locales y acaban mejorando el rendimiento general del algoritmo con un pequeño incremento en los tiempos de ejecución
 
 
 
@@ -500,7 +506,7 @@ Por otro lado al hibridarlo si que se consigue una mejora sustancial en la difer
 \end{figure}
 
 
-En el gráfico del ranking se puede observar que, en general, este algoritmo y sus modificaciones no son mejores que otras técnicas para le resolución de los problemas del benchmark CEC2017.
+En el gráfico del ranking se puede observar que, en general, este algoritmo y sus modificaciones no son mejores que otras técnicas para la resolución de los problemas del benchmark CEC2017.
 
 \subsection{D30}
 
@@ -522,7 +528,7 @@ En el gráfico del ranking se puede observar que, en general, este algoritmo y s
 \end{figure}
 
 
-En estas ejecuciones la version con la mejora teórica no aporta ninguna mejora, solo un incremento en los tiempos de ejecución que la verdad no dan pié a usar esta versión en dimensiones superiores. Sigue estando presente el razonamiento del apartado anterior sobree la cantidad de elementos de la población y a cuantos afecta el elitismo. Esto se puede observar en la imagen \ref{img:aaaaaaaaaaaaaaaaaaaaaaa} la cual, a pesar de estar dibujados la evolución de los 3 algoritmos, EL GWO y su versión híbrida dan siempre los mismos resultados
+En estas ejecuciones la versión con la mejora teórica no aporta ninguna mejora, solo un incremento en los tiempos de ejecución que la verdad no dan pié a usar esta versión en dimensiones superiores. Sigue estando presente el razonamiento del apartado anterior, sobre la cantidad de elementos de la población y a cuantos afecta el elitismo. Esto se puede observar en la imagen \ref{img:aaaaaaaaaaaaaaaaaaaaaaa} la cual, a pesar de estar dibujados la evolución de los 3 algoritmos, EL GWO y su versión híbrida dan siempre los mismos resultados
 
 
 \subsubsection{Comparativa externa}
@@ -622,13 +628,13 @@ Para la ejecución del programa se ha pensado en pasar los parámetros siempre p
 
 \begin{figure}[H]
     \centering
-    \caption{Flags permitidas por el ejecutable}
+    \caption{Flags permitidos por el ejecutable}
     \includegraphics[width=\textwidth]{dash_help_program.png}
 
 
 \end{figure}
 
-Si el programa se ejecuta sin ningun flag, se ejecutará la versión básica del algoritmo 10 veces con semilla igual a la hora de la cpu en el momento de la ejecución.
+Si el programa se ejecuta sin ningún flag, se ejecutará la versión básica del algoritmo 10 veces con semilla igual a la hora de la cpu en el momento de la ejecución.
 
 
 \bibliographystyle{alpha}
